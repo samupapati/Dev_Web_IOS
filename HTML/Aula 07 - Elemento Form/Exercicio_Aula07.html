@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sweet and Love</title>
+</head>
+<body>
+    <main>
+        <p>Queremos conhecer melhor os nossos clientes. Por favor, nos ajude com este questionário.</p>
+        <form name="infoUsuario" action="">
+            <!--Informações do cliente-->
+            <label for="nome">Escreva seu nome:</label>
+            <input id="nome" type="text" required>
+            <br><br>
+
+            <label for="idade">Selecione sua idade:</label>
+            <input id="idade" type="number" max="110" min="0" required>
+            <br><br>
+
+            <label for="email">Escreva seu email:</label>
+            <input id="email" type="email" required>
+            <br><br>
+
+            <!--Pesquisa para o cliente sobre a loja-->
+            <!--Radio-->
+            <p>Você indicaria a loja para um amigo?</p>
+            <input id="sim" type="radio" name="simnao">
+            <label for="sim">Sim</label>
+
+            <input id="nao" type="radio" name="simnao">
+            <label for="nao">Não</label>
+            <br><br>
+
+            <!--Checkbox-->
+            <p>O que você mais gostou na loja?</p>
+            <input id="doces" type="checkbox">
+            <label for="doces">Doces</label>
+
+            <input id="ambiente" type="checkbox">
+            <label for="ambiente">Ambiente</label>
+
+            <input id="entrega" type="checkbox">
+            <label for="entrega">Entrega (via app)</label>
+
+            <input id="atendimento" type="checkbox">
+            <label for="atendimento">Atendimento</label>
+
+            <input id="valores" type="checkbox">
+            <label for="valores">Preço</label>
+            <br><br>
+
+            <!--Pergunta tipo texto-->
+            <label for="sobremesaSalgado">Qual sobremesa ou salgado você comprou no último pedido?</label>
+            <input id="sobremesaSalgado" type="text">
+            <br><br>
+
+            <!--Select-->
+            <label for="loja">Em qual loja você foi atendido?</label>
+            <select name="loja" id="loja">
+                <option value="aclimacao">Aclimação</option>
+                <option value="liberdade">Liberdade</option>
+                <option value="tatuape">Tatuapé</option>
+                <option value="saoJoaquim">São Joaquim</option>
+            </select>
+            <br><br>
+
+            <!--Enviar formulário-->
+            <input type="submit" value="Pronto!">
+        </form>
+    </main>
+    
+</body>
+</html>

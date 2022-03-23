@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sweet and Love</title>
+</head>
+<body>
+    <main>
+        <fieldset>
+            <p style="text-align: center;">Queremos conhecer melhor os nossos clientes. Por favor, nos ajude com este questionário.</p>
+        </fieldset>
+        <br>
+
+        <form name="infoUsuario" method="post" action="mailto:samuelpapati@gmail.com">
+            <!--Informações do cliente-->
+            <label for="nome">Escreva seu nome:</label>
+            <input id="nome" type="text" required>
+            <br><br>
+
+            <label for="idade">Selecione sua idade:</label>
+            <input id="idade" type="number" max="110" min="0" required>
+            <br><br>
+
+            <label for="email">Escreva seu email:</label>
+            <input id="email" type="email" required>
+            <br>
+
+            <!--Pesquisa para o cliente sobre a loja-->
+            <!--Radio-->
+            <p>Você indicaria a loja para um amigo?</p>
+            <input id="sim" type="radio" name="simnao">
+            <label for="sim">Sim</label>
+
+            <input id="nao" type="radio" name="simnao">
+            <label for="nao">Não</label>
+            <br>
+
+            <!--Checkbox-->
+            <p>O que você mais gostou na loja?</p>
+            <input id="doces" type="checkbox">
+            <label for="doces">Doces</label>
+
+            <input id="ambiente" type="checkbox">
+            <label for="ambiente">Ambiente</label>
+
+            <input id="entrega" type="checkbox">
+            <label for="entrega">Entrega (via app)</label>
+
+            <input id="atendimento" type="checkbox">
+            <label for="atendimento">Atendimento</label>
+
+            <input id="valores" type="checkbox">
+            <label for="valores">Preço</label>
+            <br><br>
+
+            <!--Pergunta tipo texto-->
+            <label for="sobremesaSalgado">Qual sobremesa ou salgado você comprou no último pedido?</label>
+            <input id="sobremesaSalgado" type="text">
+            <br><br>
+
+            <!--Select-->
+            <label for="loja">Em qual loja você foi atendido?</label>
+            <select name="loja" id="loja">
+                <option value="aclimacao">Aclimação</option>
+                <option value="liberdade">Liberdade</option>
+                <option value="tatuape">Tatuapé</option>
+                <option value="saoJoaquim">São Joaquim</option>
+            </select>
+            <br>
+
+            <!--Type Range-->
+            <p>Qual a sua vontade de voltar ao restaurante?</p>
+            1
+            <input type="range" list="range" min="1" max="10">
+            10
+            <datalist id="range">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+                <option value="6"></option>
+                <option value="7"></option>
+                <option value="8"></option>
+                <option value="9"></option>
+                <option value="10"></option>
+            </datalist>
+            <br><br>
+
+            <!--Feedback do cliente-->
+            <textarea name="" id="" cols="35" rows="6" placeholder="Escreva aqui seu feedback sobre nós."></textarea>
+            <br>
+
+            <!--Enviar formulário-->
+            <div>
+                <input type="submit" value="Pronto!" id="button">
+            </div>
+            <br>
+        </form>
+    </main>
+    <footer>
+        <fieldset>
+            <p style="text-align: center;">&copy;Sweet and Love. Todos os direitos reservados. 2022.</p>
+        </fieldset>
+    </footer>
+    <style>
+        body{
+            font-family: Calibri; font-style: italic;
+        }
+
+        div{
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
