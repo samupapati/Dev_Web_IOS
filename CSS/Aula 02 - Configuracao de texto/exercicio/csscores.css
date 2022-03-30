@@ -1,0 +1,23 @@
+body{
+    font-size: 30px;
+}
+
+#pcor{
+    color: orange;
+}
+
+#phexa{
+    color: #00ff62;
+}
+
+#phexaAbreviado{
+    color: #F5F
+}
+
+#pRGB{
+    color:rgb(0, 38, 255)
+}
+
+#pHSL{
+    color: hsl(180, 100%, 50%)
+}
