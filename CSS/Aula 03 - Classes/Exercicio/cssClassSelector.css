@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+body{
+    background-color: antiquewhite;
+    color: blueviolet;
+    text-align: center;
+    margin: 0;
+    padding: 20% 0 20% 0;
+}
+
+.generico{
+    background-color: chartreuse;
+}
+
+h2.especifico{
+    text-decoration: underline;
+}
+
+.duplo{
+    color: rgb(108, 30, 182);
+}
+
