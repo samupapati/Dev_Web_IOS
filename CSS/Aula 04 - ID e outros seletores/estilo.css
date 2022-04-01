@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Staatliches';
+}
+
+.esqueci{
+    color: #40E0D0;
+    font-size: 50px;
+}
+
+#esqueci2{
+    color: #4B0082;
+    font-size: 50px;
+}
+
+p#sobrenome{
+    color: #9dafff;
+    font-size: 50px;
+}
+
+section p{
+    background-color: rgb(0, 129, 241);
+    color: white;
+    font-size: 50px;
+}

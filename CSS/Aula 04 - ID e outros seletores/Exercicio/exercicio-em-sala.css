@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+*{
+    text-align: center;
+    margin: 0;
+    font-size: 25px;
+}
+
+body{
+    background-color: rgb(230, 255, 255);
+    padding-top: 3%;
+    overflow: hidden;
+}
+
+h1{
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+}
+
+#listaUm{
+    font-family: 'Ubuntu Condensed';
+    background-color: rgb(200, 255, 255);
+}
+
+#listaDois{
+    font-family: 'Raleway';
+    background-color: rgb(150, 255, 255);
+}  
+
+#listaTres{
+    font-family: 'Bebas Neue';
+    background-color: rgb(10, 255, 255);
+}
+
+footer{
+    background-image: url(imgfooter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 22%;
+    width: 100%;
+    height: 200px;
+}
+
+footer p{
+    color: white;
+}
