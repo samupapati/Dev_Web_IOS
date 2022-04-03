@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+html, body{
+    padding: 0%;
+    margin: 0%;
+    height: 100%; width: 100%;
+    overflow: hidden;
+}
+
+body{
+    font-family: 'Anybody';
+    background-color: rgb(225, 248, 255);
+}
+
+header{
+    height: 10%; width: 100%;
+    background-color: rgb(54, 207, 174);
+    text-align: center;
+}
+
+#tapa{
+    margin-top: 2%; margin-left: 10%;
+    position: absolute;
+    height: 12%; width: 10%;
+}
+
+#linksnav{
+    height: 100%;
+    display: inline-block;
+    margin-left: 0%;
+}
+
+#linksnav button{
+    position: relative;
+    height: 100%;
+    background-color: rgb(54, 207, 174);
+    border: none;
+}
+
+#linksnav button a{
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+#linksnav button:hover{
+    background-color: rgb(52, 148, 127);
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+h1{
+    text-align: center;
+    font-weight: 600;
+    color: rgb(60, 202, 47)
+}
+
+
+table{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /*background-color: red;*/
+    border-collapse: collapse;
+    font-family: 'Nunito';
+    text-align: center;
+    margin-bottom: 14%;
+}
+
+.titulosTabela{
+    background-color: rgb(52, 148, 127);
+    color: rgb(209, 255, 216);
+}
+
+.conteudoUmTabela{
+    background-color: rgb(101, 214, 214);
+    color: rgb(255, 255, 255);
+}
+
+.conteudoDoisTabela{
+    background-color: rgb(198, 255, 247);
+    color: rgb(0, 0, 0);
+}
+
+footer{
+    background-color: rgb(54, 207, 174);
+    text-align: center;
+    height: 100%;
+}
+
+#linksfooter{
+    padding: 1%;
+}
+
+footer a, p{
+    color: rgb(94, 94, 94);
+    text-decoration: none;
+}
+
+#aMiddle{
+    margin-left:10%; margin-right: 10%;
+}
