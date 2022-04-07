@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+html, body{
+    padding: 0; margin: 0;
+    font-family: Montserrat;
+}
+
+body{
+    background-image: url(cafefundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article{
+    background-color: white;
+    text-align: center;
+}
+
+button{
+    height: 80px; width: 120px;
+    background-color: rgb(216, 199, 175);
+    border: 1px solid rgb(216, 199, 175);
+    cursor: pointer;
+}
+
+a{
+    color: rgb(97, 60, 11);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#aMeio{
+    margin-left: -4px; margin-right: -4px;
+}
+
+button:hover{
+    background-color: rgb(172, 150, 120);
+    border: 1px solid rgb(172, 150, 120);
+}
