@@ -1,39 +1,67 @@
 @charset "utf-8";
 
 html, body{
-    padding: 0; margin: 0;
-    font-family: Montserrat;
+    padding: 0%; margin: 0%;
+    font-family: 'Varela Round', sans-serif;
 }
 
-body{
-    background-image: url(cafefundo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-article{
-    background-color: white;
+header{
+    background-color: rgb(255, 233, 181);
+    height: 100px;
     text-align: center;
 }
 
-button{
-    height: 80px; width: 120px;
-    background-color: rgb(216, 199, 175);
-    border: 1px solid rgb(216, 199, 175);
-    cursor: pointer;
+#mascote{
+    height: 95%;
 }
 
 a{
-    color: rgb(97, 60, 11);
+    font-weight: bold;
+    color: rgb(110, 110, 110);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.2em;
+    background-color: rgb(255, 255, 255);
+    padding: 1%;
+    border-radius: 10px;
 }
 
 #aMeio{
-    margin-left: -4px; margin-right: -4px;
+    margin-right: 1.5%; margin-left: 1.5%;
 }
 
-button:hover{
-    background-color: rgb(172, 150, 120);
-    border: 1px solid rgb(172, 150, 120);
+main{
+    margin: 0pt 80pt 0pt 80pt;
+    padding: 0% 2%;
+    background-color: rgb(255, 255, 255);
+    height: 21cm;
+    text-align: center;
+}
+
+h1{
+    color: rgb(141, 141, 141);
+    margin-top: 0%;
+    font-size: 2.5em;
+}
+
+article{
+    color: rgb(85, 85, 85);
+    margin-bottom: 1cm;
+    font-size: 0.2in;
+}
+
+#campeoes{
+    border-radius: 3px;
+    border: 10px groove rgb(255, 233, 181);;
+}
+
+footer{
+    background-color: rgb(255, 233, 181);
+    height: 50px;
+    text-align: center;
+    padding-top: 2%;
+}
+
+footer p{
+    color: rgb(165, 165, 165);
+    margin-top: 0;
 }
