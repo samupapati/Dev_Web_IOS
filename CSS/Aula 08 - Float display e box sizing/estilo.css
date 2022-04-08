@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img{
+    width: 700px;
+}
+
+.img1{
+    float: right;
+}
+
+.div2{
+    margin-top: 30%;
+}
+
+.img2, .img3{
+    width: 500px;
+}
+
+.paragrafo{
+    clear: none;
+}
+
+.img2{
+    float: left;
+}
+
+.img3{
+    float: right;
+}
