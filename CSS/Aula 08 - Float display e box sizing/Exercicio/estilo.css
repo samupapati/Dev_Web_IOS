@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.fixFloat{
+    clear: both;
+}
+
 html, body{
     padding: 0; margin: 0;
 }
@@ -11,6 +15,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
+    color: white;
 }
 
 #container{
@@ -45,10 +50,196 @@ a:hover{
     background-color: rgb(94, 94, 94);
 }
 
+main{
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+main article, #art2, #art3, #art4, #art5{
+    text-align: center;
+    height: 100%;
+    background-color: rgba(36, 36, 36, 0.705);
+    border-top-left-radius: 10px; border-top-right-radius: 10px;
+    padding-top: 20px;
+}
+
+article img{
+    width: 50%;
+    filter: brightness(90%);
+    border-radius: 3px;
+}
+
+figure{
+    padding: 1%;
+    width: 10%;
+}
+
+figcaption{
+    margin-bottom: 20px;
+    font-size: 25px; font-weight: bold;
+}
+
+section{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+section p{
+    color: black;
+}
+
+.containerflex{
+    margin-top: 10%;
+    display: flex;
+}
+
+/*Section 1*/
+#section1{
+    height: 100%;
+    border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+}
+
+#section1 p{
+    margin-top: 0;
+}
+
+/*Section 2*/
+
+#art2{
+    width: 50%;
+    border-bottom-left-radius: 10px;
+}
+
+#art2 img{
+    width: 100%;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+}
+
+#section2{
+    width: 50%;
+    border-top-right-radius: 10px; border-bottom-right-radius: 10px;
+    padding: 1%;
+}
+
+/*Section 3*/
+#art3{
+    width: 50%;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+#art3 img{
+    width: 100%;
+    border-radius: 0px;
+    border-bottom-right-radius: 10px;
+}
+
+#section3{
+    width: 50%;
+    border-top-left-radius: 10px; border-bottom-left-radius: 10px;
+    padding: 1%;
+}
+
+/*Section 4*/
+.contAlt{
+    display: block;
+}
+
+#art4{
+    padding-bottom: 10px;
+}
+
+#art4 figcaption{
+    margin-bottom: 0;
+}
+
+#section4 img{
+    width: 40%;
+    border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+}
+
+#section4{
+    height: 100%;
+    border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+}
+
+/*Section 5*/
+
+#artic5{
+    margin-top: 10%;
+}
+
+#section5{
+    height: 100%;
+    border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+    padding: 1%;
+}
+
+#section5 p{
+    margin-top: 0;
+}
+
+/*section 6*/
+
+#artic6{
+    margin-top: 10%;
+}
+
+#artic6 figcaption{
+    margin-bottom: 0;
+    padding-bottom: 1%;
+}
+
+#section6{
+    color: black;
+    border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+}
+
+#section6 ol{
+    margin-top: 0; margin-bottom: 0;
+}
+
+#section6 li{
+    display: list-item;
+
+}
+
+/*Footer*/
+
+footer{
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+    color: rgb(180, 180, 180);
+    font-style: italic;
+}
+
+/*Scrollbar*/
+
+body::-webkit-scrollbar{
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track{
+    background: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(126, 126, 126);   
+}
+
+/*Media*/
+
 @media screen and (min-height: 0px) and (max-height: 768px){
     header{
         margin-top: 15%;
         margin-bottom: 35%;
+    }
+
+    footer{
+        margin-top: 60%;
     }
 }
 
@@ -57,6 +248,10 @@ a:hover{
         margin-top: 15%;
         margin-bottom: 35%;
     }
+    
+    footer{
+        margin-top: 55%;
+    }
 }
 
 @media screen and (min-height: 901px) and (max-height: 1080px){
@@ -64,12 +259,20 @@ a:hover{
         margin-top: 15%;
         margin-bottom: 35%;
     }
+    
+    footer{
+        margin-top: 55%;
+    }
 }
 
 @media screen and (min-height: 1081px){
     header{
         margin-top: 15%;
         margin-bottom: 35%;
+    }
+    
+    footer{
+        margin-top: 50%;
     }
 }
 
