@@ -1,18 +1,39 @@
 @charset "utf-8";
 
 body{
-    background-image: url(img/fundo.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(aqua, purple);
 }
 
 .container{
+    padding-left: 1em; padding-right: 1em;
+}
 
+header{
+    background-image: url(img/fundoHeader.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
+    padding: 5% 0%;
 }
 
 h1{
     text-align: center;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    font-family: 'Acme';
+    font-size: 50px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(221, 221, 221));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main{
+    background-image: url(img/fundo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .listas{
@@ -22,7 +43,7 @@ h1{
 }
 
 .lista1, .lista2{
-    width: 40%;
+    width: 45%;
 }
 
 .lista3, .lista4, .lista5, .lista6{
@@ -30,14 +51,12 @@ h1{
 }
 
 .lista1, .lista2, .lista3, .lista4, .lista5, .lista6{
-    background-color: rgb(255, 172, 172);
     margin: 1%;
     height: 100%;
     text-align: center;
 }
 
 ul{
-    background-color: red;
     padding-left: 0;
 }
 
@@ -47,17 +66,49 @@ ul li{
     padding: 3%;
     font-size: 110%;
     font-family: 'Akshar';
+    font-weight: bold;
 }
 
 h2{
-    background-color: red;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    background-image: radial-gradient(aqua, purple);
+    color: white;
+}
+
+footer{
+    background-color: black;
+    padding: 3%;
+}
+
+footer p{
+    margin: 0;
+    color: white;
+    font-family: 'Akshar';
+    text-align: center;
 }
 
 li:first-child, li:last-child, li:nth-child(3){
-    background-color: black;
+    background-image: radial-gradient(rgba(0, 255, 255, 0.336), rgba(128, 0, 128, 0.295));
+    color: white;
 }
 
 li:nth-child(2), li:nth-child(4){
-    background-color: gray;
+    background-image: radial-gradient(rgba(128, 0, 128, 0.274), rgba(0, 255, 255, 0.315));
+    color: white;
 }
 
+@media all and (max-width: 600px){
+    .lista1, .lista2, .lista3, .lista4, .lista5, .lista6{
+    width: 90%;
+    }
+
+    main{
+        background-image: none;
+        background-color: black;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+}
