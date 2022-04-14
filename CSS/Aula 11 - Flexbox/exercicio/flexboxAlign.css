@@ -153,7 +153,7 @@ body::-webkit-scrollbar{
 }
 
 body::-webkit-scrollbar-track{
-    background-color: #dddddd;
+    background-color: #d3d3d3;
 }
 
 body::-webkit-scrollbar-thumb{
@@ -202,3 +202,4 @@ hr{
     }
 }
 
+/*fefewf*/
