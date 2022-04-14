@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.container{
+    display: inline-grid;
+}
+
+div{
+    width: 200px; 
+    height: 200px;
+}
+
+.item-1{
+    background-color: red;
+}
+
+.item-2{
+    background-color: yellow;
+}
+
+.item-3{
+    background-color: black;
+}
