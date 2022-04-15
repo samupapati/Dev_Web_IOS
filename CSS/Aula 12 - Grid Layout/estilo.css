@@ -7,22 +7,27 @@ body{
 }
 
 .container{
-    display: inline-grid;
-}
-
-div{
-    width: 200px; 
-    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    background-color: chartreuse;
+    justify-items: center;
 }
 
 .item-1{
     background-color: red;
+    width: 200px; 
+    height: 200px;
 }
 
 .item-2{
     background-color: yellow;
+    width: 200px; 
+    height: 200px;
 }
 
 .item-3{
     background-color: black;
+    width: 200px; 
+    height: 200px;
 }
