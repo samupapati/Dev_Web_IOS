@@ -1,31 +1,46 @@
 
+
 body{
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(to right, orange, orangered, orange);
 }
 
 .container{
     width: 100%;
 }
 
+p, a, label, button, h1, h2{
+    font-family: 'Yaldevi';
+}
+
+
+
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*menu*/
 .header{
     width: 100%;
-    background-color: red;
+    background-color: gray;
+    border-bottom: 3px solid white;
 }
 
 .menu{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
 }
 
 .menu a{
-    background-color: yellow;
+    background-color: orange;
+    color: black;
     padding: 1%;
-    margin: 0px 5px;
-    font-size: 23px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color: white;
+    background-color: orangered;
 }
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Pagina inicial*/
@@ -35,25 +50,168 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 15%;
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
 }
 
 .imgPagInicial{
-    width: 350px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
 }
 
 .imgPagInicial img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 3.5px;
 }
 
 .texto{
-    padding: 2%;
+    padding: 1%;
+    width: 50%;
+}
+
+.info{
+    color: #ffffff;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Main*/
+.content{
+    padding: 0 0.5em;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Formulário*/
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2%;
+    border-radius: 5px;
+    border-top: 5px solid orange; border-bottom: 5px solid orange;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.form label{
+    margin: 10px 0px !important;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Listas e tabela*/
+.listsAndTable{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.table1{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 0 2%;
+}
+
+.table2{
+    width: 45%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Tabela*/
+.tabela{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    padding: 2%;
+}
+
+.table{
+    width: 50%;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Listas*/
+
+.listas{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-group{
+    width: 50%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Card*/
+.secCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: gainsboro;
+    padding: 2%;
+}
+
+.titleCards{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: orange;
+    color: #646464;
+    margin: 0 2%;
+    box-shadow: 0px 0px 3px black;
+    border: 5px solid white;
+}
+
+.card-body{
+    border-radius: 5px !important;
+}
+
+.card p{
+    font-size: 13px;
+    font-family: 'Yaldevi';
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Footer*/
+.footer{
+    background-color: gray;
+    padding: 2%;
+    border-top: 5px solid white;
+    text-align: center;
+}
+
+.footer p{
+    display: inline;
+    margin: 0;
+    color: orange;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 2px solid black;
+}
