@@ -8,11 +8,52 @@ body{
     width: 100%;
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*menu*/
 .header{
     width: 100%;
     background-color: red;
 }
 
-.nav{
+.menu{
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.menu a{
+    background-color: yellow;
+    padding: 1%;
+    margin: 0px 5px;
+    font-size: 23px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Pagina inicial*/
+
+.pagInicial{
+    background-image: url(img/fundo.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgPagInicial{
+    width: 350px;
+    height: 300px;
+}
+
+.imgPagInicial img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto{
+    padding: 2%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Formulário*/
