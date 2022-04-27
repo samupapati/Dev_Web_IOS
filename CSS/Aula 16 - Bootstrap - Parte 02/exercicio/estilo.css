@@ -5,5 +5,14 @@ body{
 }
 
 .container{
+    width: 100%;
+}
 
+.header{
+    width: 100%;
+    background-color: red;
+}
+
+.nav{
+    width: 100%;
 }
