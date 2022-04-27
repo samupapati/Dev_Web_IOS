@@ -1,16 +1,14 @@
-
-
-body{
+body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to right, orange, orangered, orange);
 }
 
-.container{
+.container {
     width: 100%;
 }
 
-p, a, label, button, h1, h2{
+p, a, label, button, h1, h2 {
     font-family: 'Yaldevi';
 }
 
@@ -18,19 +16,19 @@ p, a, label, button, h1, h2{
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*menu*/
-.header{
+.header {
     width: 100%;
     background-color: gray;
     border-bottom: 3px solid white;
 }
 
-.menu{
+.menu {
     width: 100%;
     display: flex;
     justify-content: end;
 }
 
-.menu a{
+.menu a {
     background-color: orange;
     color: black;
     padding: 1%;
@@ -38,14 +36,15 @@ p, a, label, button, h1, h2{
     text-decoration: none;
 }
 
-.menu a:hover{
+.menu a:hover {
     color: white;
     background-color: orangered;
 }
+
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Pagina inicial*/
 
-.pagInicial{
+.pagInicial {
     background-image: url(img/fundo.webp);
     background-size: cover;
     background-position: center;
@@ -59,12 +58,12 @@ p, a, label, button, h1, h2{
     margin-bottom: 5%;
 }
 
-.imgPagInicial{
+.imgPagInicial {
     width: 300px;
     height: 200px;
 }
 
-.imgPagInicial img{
+.imgPagInicial img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -72,24 +71,24 @@ p, a, label, button, h1, h2{
     border-radius: 3.5px;
 }
 
-.texto{
+.texto {
     padding: 1%;
     width: 50%;
 }
 
-.info{
+.info {
     color: #ffffff;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Main*/
-.content{
+.content {
     padding: 0 0.5em;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Formulário*/
-.form{
+.form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -97,29 +96,30 @@ p, a, label, button, h1, h2{
     margin-bottom: 5%;
 }
 
-.form form{
+.form form {
     display: flex;
     flex-direction: column;
     background-color: white;
     padding: 2%;
     border-radius: 5px;
-    border-top: 5px solid orange; border-bottom: 5px solid orange;
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
     box-shadow: 0px 0px 5px gray;
 }
 
-.form label{
+.form label {
     margin: 10px 0px !important;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Listas e tabela*/
-.listsAndTable{
+.listsAndTable {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.table1{
+.table1 {
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -127,13 +127,13 @@ p, a, label, button, h1, h2{
     margin: 0 2%;
 }
 
-.table2{
+.table2 {
     width: 45%;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Tabela*/
-.tabela{
+.tabela {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -142,7 +142,7 @@ p, a, label, button, h1, h2{
     padding: 2%;
 }
 
-.table{
+.table {
     width: 50%;
     text-align: center;
 }
@@ -150,7 +150,7 @@ p, a, label, button, h1, h2{
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Listas*/
 
-.listas{
+.listas {
     background-color: white;
     width: 100%;
     display: flex;
@@ -158,13 +158,13 @@ p, a, label, button, h1, h2{
     align-items: center;
 }
 
-.list-group{
+.list-group {
     width: 50%;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Card*/
-.secCards{
+.secCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -172,13 +172,13 @@ p, a, label, button, h1, h2{
     padding: 2%;
 }
 
-.titleCards{
+.titleCards {
     width: 100%;
     text-align: center;
     margin-bottom: 2%;
 }
 
-.card{
+.card {
     width: 100%;
     display: flex;
     align-items: center;
@@ -189,25 +189,25 @@ p, a, label, button, h1, h2{
     border: 5px solid white;
 }
 
-.card-body{
+.card-body {
     border-radius: 5px !important;
 }
 
-.card p{
+.card p {
     font-size: 13px;
     font-family: 'Yaldevi';
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Footer*/
-.footer{
+.footer {
     background-color: gray;
     padding: 2%;
     border-top: 5px solid white;
     text-align: center;
 }
 
-.footer p{
+.footer p {
     display: inline;
     margin: 0;
     color: orange;
