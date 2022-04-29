@@ -1,0 +1,37 @@
+Resposta da 1ª: Yara mora no 4º andar e tem um cachorro
+
+
+Resposta da 2ª: 
+
+P or Q |  P and Q | P not
+
+   V   |    V     |    F
+   V   |    F     |    F
+   V   |    F     |    V
+   F   |    F     |    V
+
+
+
+Resposta da 3ª:
+
+O gato está no sótão e o rato está no quarto.
+
+
+
+Resposta da 4ª:
+
+
+
+menina 1	       menina 2 		        menina 3         menina 4
+
+raquel          |  vivian            |  bruna              | ana
+gatos           |  passaros          | cachorros           | peixes
+45 fps 		    |  55 fps            |  40 fps             | 50 fps
+suco de laranja	|  limonada	         |  suco de maracuja   | suco de morango
+11 anos 	    |  10 anos		     |  9 anos		       |  8 anos
+maio branco	    |  maio azul		 |  maio amarelo	   | maio verde
+
+             
+
+
+
