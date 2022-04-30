@@ -26,14 +26,37 @@ O gato está no sótão e o rato está no quarto.
 
 Resposta da 4ª:
 
-menina 1	       menina 2 		        menina 3           menina 4
+menina 1: 	       
+   raquel                   
+   gatos                    
+   45 fps 		             
+   suco de laranja          
+   11 anos 	       	       
+   maio branco	    		    
 
-raquel            vivian              bruna              ana
-gatos             passaros            cachorros          peixes
-45 fps 		      55 fps              40 fps             50 fps
-suco de laranja   limonada	           suco de maracuja   suco de morango
-11 anos 	         10 anos		        9 anos		         8 anos
-maio branco	      maio azul		     maio amarelo	      maio verde
+menina 2: 	
+   vivian   
+   passaros 
+   55 fps   
+   limonada	
+   10 anos	
+   maio azul
+
+menina 3:   
+   bruna           
+   cachorros       
+   40 fps          
+   suco de maracuja
+   9 anos		       
+   maio amarelo	   
+
+menina 4:
+   ana
+   peixes
+   50 fps
+   suco de morango
+   8 anos
+   maio verde
 
 
 
