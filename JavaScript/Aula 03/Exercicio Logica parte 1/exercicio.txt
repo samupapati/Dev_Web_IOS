@@ -1,4 +1,8 @@
+==============================Exercício em sala===================================
+
 Resposta da 1ª: Yara mora no 4º andar e tem um cachorro
+
+
 
 
 Resposta da 2ª: 
@@ -12,26 +16,175 @@ P or Q |  P and Q | P not
 
 
 
+
 Resposta da 3ª:
 
 O gato está no sótão e o rato está no quarto.
 
 
 
+
 Resposta da 4ª:
 
+menina 1	       menina 2 		        menina 3           menina 4
+
+raquel            vivian              bruna              ana
+gatos             passaros            cachorros          peixes
+45 fps 		      55 fps              40 fps             50 fps
+suco de laranja   limonada	           suco de maracuja   suco de morango
+11 anos 	         10 anos		        9 anos		         8 anos
+maio branco	      maio azul		     maio amarelo	      maio verde
 
 
-menina 1	       menina 2 		        menina 3         menina 4
 
-raquel          |  vivian            |  bruna              | ana
-gatos           |  passaros          | cachorros           | peixes
-45 fps 		    |  55 fps            |  40 fps             | 50 fps
-suco de laranja	|  limonada	         |  suco de maracuja   | suco de morango
-11 anos 	    |  10 anos		     |  9 anos		       |  8 anos
-maio branco	    |  maio azul		 |  maio amarelo	   | maio verde
 
-             
+==============================Exercício em casa===================================
+
+Resposta da 1ª:
+
+var funcionario = "Carlos";
+var salarioAtual = 2.500;
+var reajuste = 0.13;
+var aumento = salarioAtual*reajuste;
+var novoSalario = aumento+salarioAtual;
+console.log(`Olá, ${funcionario}! Seu salário foi reajustado em 13%, agora você receberá R$${novoSalario},00 .`);
+
+
+
+
+Resposta da 2ª:      
+
+var pedro = 6
+var maria = 7
+var ana = 8
+var joao = 9   
+
+const mediaEscolar = 7
+
+var mediana = (maria+ana)/2
+var mediaNota = (pedro+maria+ana+joao)/4
+
+console.log(`mediana: ${mediana}, média: ${mediaNota}`)
+console.log(`A mediana está acima da média escolar`)
+
+
+
+
+Resposta da 3ª:
+
+//INGREDIENTES
+1 xícara de chá de leite
+2 ovos
+2 xícaras de chá de farinha de trigo
+1 xícara de chá de chocolate em pó
+1 xícara de chá de açúcar
+1 colher de sopa de fermento
+manteiga
+
+//Passo 1 - SEPARANDO OS INGREDIENTES
+ande até o armário
+se o armário estiver fechado abra a porta do armário. se não, deixe aberta
+pegue 4 xicaras de chá
+pegue o pacote de farinha de trigo
+pegue o pacote de chocolate em pó
+pegue o pacote de açúcar
+pegue o pacote de fermento
+pegue o liquidificador
+pegue a forma
+pegue um papel toalha
+feche a porta do armário
+leve até a mesa, deixe na mesa
+
+va até a gaveta
+se a gaveta estiver fechada abra. se não, deixe aberta
+pegue 1 colher
+feche a gaveta
+leve até a mesa, deixe na mesa
+
+va até a geladeira
+se a porta da geladeira estiver fechada abra. se não, deixe aberta
+pegue o pote de leite
+pegue 2 ovos
+pegue o pote de manteiga
+feche a porta da geladeira
+leve até a mesa, deixe na mesa
+
+
+//Passo 2 - PREPARANDO A MASSA
+ligue o liquidificador
+retire a tampa do liquidificador
+pegue uma xicara
+coloque o leite na xicara até encher
+após encher, pegue o a xicara com o leite e coloque no liquidificador
+
+pegue 1 ovo
+quebre em cima do liquidificador para a gema e a clara cair lá dentro
+repita 1 vez
+pegue a casca dos ovos
+va até o lixo
+abra a tampa do lixo, se não estiver aberta
+jogue a casca dos ovos no lixo
+feche a tampa do lixo
+volte até a mesa
+
+pegue outra xicara
+pegue a farinha de trigo e coloque na xicara até encher
+após encher, pegue a xicara com a farinha de trigo e coloque a farinha no liquidificador
+repita 1 vez
+
+pegue outra xicara
+pegue o chocolate em pó e coloque na xicara até encher
+após encher, pegue a xicara com o chocolate em pó e coloque o chocolate no liquidificador
+
+pegue outra xicara
+pegue o açúcar e coloque na xicara até encher
+após encher, pegue a xicara com o açúcar e coloque o açúcar no liquidificador
+
+pegue a tampa do liquidificador
+coloque a tampa no liquidificador
+bata até misturar bem
+
+retire a tampa do liquidificador
+pegue uma colher
+encha a colher com fermento
+insira o fermento da colher no liquidificador
+mecha até misturar
+
+
+//Passo 3 - UNTANDO A FORMA
+retire a tampa da manteiga
+pegue um papel toalha
+pegue um pouco de manteiga com o papel toalha
+unte a forma com o papel toalha
+
+//Passo 4 - ASSANDO O BOLO
+Após untar, pegue o liquidificador e coloque a massa na forma
+pegue a forma e leve até o fogão
+se a porta do forno estiver fechada, abra
+coloque a forma dentro do forno
+ligue o forno em médio
+feche a porta do forno
+espere até o bolo crescer
+
+Após o bolo crescer, desligue o forno
+abra a porta do forno
+retire a forma do forno
+feche a porta do forno
+leve até a mesa
+coloque a forma na mesa
+
+espere esfriar para degustar.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
