@@ -26,5 +26,5 @@ console.log(notebook);
 const ConverterAnosEmDias = (anos = 2022, dias = 365) => {
     return anos * dias; 
 };
-console.log(ConverterAnosEmDias);
+console.log(ConverterAnosEmDias());
 
