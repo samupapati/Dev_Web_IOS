@@ -22,9 +22,12 @@ const notebook = {
 //Exibindo o objeto notebook no console
 console.log(notebook);
 
+//Função que converte anos em dias
 
 const ConverterAnosEmDias = (anos = 2022, dias = 365) => {
     return anos * dias; 
 };
-console.log(ConverterAnosEmDias());
+console.log(`2022 anos equivale a `,ConverterAnosEmDias(), `dias.`);
+
+
 
