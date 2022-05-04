@@ -1,44 +1,45 @@
-const pessoas = ['Joaquim', 'José', 'Silva', 'Xavier'];
-console.log(`Numa festa haviam 4 pessoas: `, pessoas);
+console.log(`Parte 1 do exercício:`);
+
+var pessoas1 = ['Joaquim', 'José', 'Silva', 'Xavier'];
+console.log(`Numa festa haviam 4 pessoas:\n ${pessoas1}`);
+
+var pessoas2 = pessoas1;
+pessoas2.unshift("Amanda");
+pessoas2.pop();
+console.log(`Chegou amanda, saiu Xavier:\n ${pessoas2}`);
+
+var pessoas3 = pessoas2;
+pessoas3.push("Zuleica");
+pessoas3.shift();
+console.log(`Chegou Zuleica, saiu Amanda:\n ${pessoas3}`);
+
+var pessoas4 = pessoas3;
+delete pessoas4[2];
+pessoas4[2] = "Silvana";
+console.log(`Saiu Silva, chegou Silvana:\n ${pessoas4}`);
+
+var pessoasString = pessoas4.join(' / ');
+console.log(`Ficaram 4 pessoas na festa, sendo elas:\n ${pessoasString}`);
 
 
-console.log(`Chegou amanda, saiu Xavier`);
-pessoas.unshift('Amanda');
-var saiu1 = pessoas.pop();
-console.log(pessoas);
+console.log(`\n\n\n`);
 
 
-console.log(`Chegou Zuleica, saiu Amanda`);
-pessoas.push('Zuleica');
-saiu2 = pessoas.shift();
-console.log(pessoas);
-
-
-console.log(`Saiu Silva, chegou Silvana`);
-delete pessoas[2];
-pessoas[2] = "Silvana";
-console.log(pessoas);
-
-var pessoasString = pessoas.join(' / ');
-console.log(`Ficaram 4 pessoas na festa: ${pessoasString}`);
-
-
-
-
-
-
+console.log(`Parte 2 do exercício:`);
 var carros = ['Vectra', 'Lancer', 'Golf_GTI', 'Santa_Fé', 'Stilo'];
-console.log(`lista de carros:`, carros);
+console.log(`lista de carros:\n ${carros}`);
+
 //Adicionando corolla e hb20
-carros.splice(7, 8, "Corolla", "HB20");
-console.log(`Adicionado Corolla e HB20:`, carros);
-//criando novo array com os elementos da variavel carros
-carros2 = carros.slice(5);
-console.log(carros2);
+carros2 = carros
+carros2.splice(5, 6, "Corolla", "HB20");
+console.log(`Adicionado Corolla e HB20: \n ${carros2}`);
+
+//excluindo os 4 primeiros carros e criando uma nova variavel para receber os 3 carros restantes
+NovoArrayCarros = carros2
+NovoArrayCarros = NovoArrayCarros.slice(4);
+console.log(`Nova array criada com os últimos 3 carros:\n ${NovoArrayCarros}`);
 
 //transformando variavel carros em string
-var carrosString = carros.join(' / ');
-console.log(`Antes:`, carros);
-console.log(`Depois:`, carrosString);
-
-
+var carrosString = NovoArrayCarros.join(' / ');
+console.log(`Antes:\n`, carros);
+console.log(`Depois:\n ${carrosString}`);
