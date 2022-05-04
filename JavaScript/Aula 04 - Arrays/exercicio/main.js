@@ -30,12 +30,12 @@ var carros = ['Vectra', 'Lancer', 'Golf_GTI', 'Santa_Fé', 'Stilo'];
 console.log(`lista de carros:\n ${carros}`);
 
 //Adicionando corolla e hb20
-carros2 = carros
+var carros2 = carros;
 carros2.splice(5, 6, "Corolla", "HB20");
 console.log(`Adicionado Corolla e HB20: \n ${carros2}`);
 
 //excluindo os 4 primeiros carros e criando uma nova variavel para receber os 3 carros restantes
-NovoArrayCarros = carros2
+var NovoArrayCarros = carros2
 NovoArrayCarros = NovoArrayCarros.slice(4);
 console.log(`Nova array criada com os últimos 3 carros:\n ${NovoArrayCarros}`);
 
