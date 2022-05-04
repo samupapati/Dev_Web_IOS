@@ -21,8 +21,10 @@ var aluno0 = [
     nascimento[0],
     turma[0]
 ];
-aluno0 = aluno0.join(' - ');
+aluno0 = aluno0.join('\n');
 console.log(aluno0);
+
+console.log(`\n`);
 
 var aluno1 = [
     alunos[1],
@@ -30,8 +32,10 @@ var aluno1 = [
     nascimento[1],
     turma[1]
 ];
-aluno1 = aluno1.join(' - ');
+aluno1 = aluno1.join('\n');
 console.log(aluno1);
+
+console.log(`\n`);
 
 var aluno2 = [
     alunos[2],
@@ -39,8 +43,10 @@ var aluno2 = [
     nascimento[2],
     turma[2]
 ];
-aluno2 = aluno2.join(' - ');
+aluno2 = aluno2.join('\n');
 console.log(aluno2);
+
+console.log(`\n`);
 
 var aluno3 = [
     alunos[3],
@@ -48,6 +54,6 @@ var aluno3 = [
     nascimento[3],
     turma[3]
 ];
-aluno3 = aluno3.join(' - ');
+aluno3 = aluno3.join('\n');
 console.log(aluno3);
 
