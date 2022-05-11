@@ -22,6 +22,8 @@ console.log('\n');
 
 console.log('Transformando a string em subtring');
 leroLero3 = leroLero.split(' ');
+console.log(leroLero3);
+console.log('Acessando o indice de posição 13:');
 console.log(leroLero3[13]);
 
 console.log('\n');
