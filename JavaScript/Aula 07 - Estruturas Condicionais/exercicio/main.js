@@ -1,54 +1,53 @@
 colab = {
   colab1: {
     nome: "Alberto",
-    salario: 5000,
+    salario: 5000.00,
     vinculo: "CLT",
     recebe: undefined,
+    aliquota: 0,
+    valorColaborado: 0,
   },
   colab2: {
     nome: "Carlos",
     salario: 2000,
     vinculo: "PJ",
     recebe: undefined,
+    aliquota: 0,
+    valorColaborado: 0,
   },
   colab3: {
     nome: "Pamela",
     salario: 6000,
     vinculo: "PJ",
     recebe: undefined,
+    aliquota: 0,
+    valorColaborado: 0,
   },
   colab4: {
     nome: "Murilo",
     salario: 4500,
     vinculo: "CLT",
     recebe: undefined,
+    aliquota: 0,
+    valorColaborado: 0,
   },
   colab5: {
     nome: "Ariane",
     salario: 12500,
     vinculo: "PJ",
     recebe: undefined,
+    aliquota: 0,
+    valorColaborado: 0,
   },
 };
 
-inss = {
-  contribuicao1: {
-    salario: 1212.0,
-    aliquota: 7.5 * 100,
-  },
-  contribuicao2: {
-    salario: 2427.35,
-    aliquota: 9 * 100,
-  },
-  contribuicao3: {
-    salario: 3641.03,
-    aliquota: 12 * 100,
-  },
-  contribuicao4: {
-    salario: 7087.22,
-    aliquota: 14 * 100,
-  },
-};
+inss = [
+  contribuicao1 = [0, 1212.01, 7.5/100],
+  contribuicao2 = [1212.01, 2427.35, 9/100],
+  contribuicao3 = [2427.36, 3641.03, 12/100],
+  contribuicao4 = [3641.03, 7087.22, 14/100]
+];
+
 
 //Verificando se é CLT ou PJ
 if (colab.colab1.vinculo == "CLT") {
@@ -78,23 +77,28 @@ if (colab.colab5.vinculo == "CLT") {
 };
 
 
-//
-if(colab.colab1.recebe == true &&
-   colab.colab1.salario <= inss.contribuicao1.salario ||
-   colab.colab1.salario >= inss.contribuicao1.salario && colab.colab1.salario <= inss.contribuicao2.salario ||
-   colab.colab1.salario >= inss.contribuicao2.salario && colab.colab1.salario <= inss.contribuicao3.salario ||
-   colab.colab1.salario >= inss.contribuicao3.salario && colab.colab1.salario <= inss.contribuicao4.salario)
-   {
-  console.log('sim')
+if(
+  colab.colab1.salario >= contribuicao1[0] && colab.colab1.salario <= contribuicao1[1] ||
+  colab.colab1.salario >= contribuicao2[0] && colab.colab1.salario <= contribuicao2[1] ||
+  colab.colab1.salario >= contribuicao3[0] && colab.colab1.salario <= contribuicao3[1] ||
+  colab.colab1.salario >= contribuicao4[0] && colab.colab1.salario <= contribuicao4[1])
+  {
+    if(colab.colab1.salario >= contribuicao1[0] && colab.colab1.salario <= contribuicao1[1]){
+      colab.colab1.aliquota = contribuicao1[2]
+      
+    }
+    if(colab.colab1.salario >= contribuicao2[0] && colab.colab1.salario <= contribuicao2[1]){
+      colab.colab1.aliquota = contribuicao2[2]
+    }
+    if(colab.colab1.salario >= contribuicao3[0] && colab.colab1.salario <= contribuicao3[1]){
+      colab.colab1.aliquota = contribuicao3[2]
+    }
+    if(colab.colab1.salario >= contribuicao4[0] && colab.colab1.salario <= contribuicao4[1]){
+      colab.colab1.aliquota = contribuicao4[2]
+      colab.colab1.valorColaborado = colab.colab1.salario*colab.colab1.aliquota
+    }
 } else{
-  console.log('nao')
+  console.log('false');
 }
 
-
-
-/*if(colab.colab1.salario <= 7087.22){
-    aliquota = 14*100;
-    porcentagem = colab.colab1.salario * aliquota;
-    resultado = colab.colab1.salario * porcentagem;
-    console.log(resultado);
-}*/
+console.log(colab.colab1.valorColaborado)
