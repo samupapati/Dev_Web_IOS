@@ -82,8 +82,12 @@ console.log(
     })
 );
 
-//Exercício em sala 
 
+
+
+//Exercício em sala 
+console.log('\n\n');
+console.log('Exercício em sala:')
 
 //Crie um Array de objetos com quatro objetos e cada objeto tera 4 propriedades e retorne todos os alunos que tirou nota maior que 6 e retorne o primeiro aluno que tirou nota 
 //menor que 5
@@ -115,13 +119,16 @@ let alunos = [
     },
 ]
 
-let aprovados = alunos.filter((aprovado) => {
-    return aprovado >= 6;
+console.log(`Alunos que tiraram nota maior que 6:`);
+let aprovados = alunos.filter((passou) => {
+    return passou.nota >= 6;
 });
 console.log(aprovados);
 
+console.log('\n');
 
-/*reprovado = alunos.find((nota2) => {
-    return nota2 <= 6;
+console.log(`Primeiro aluno na ordem da lista que tirou nota menor que 6:`);
+reprovado = alunos.find((naoPassou) => {
+    return naoPassou.nota < 6;
 })
-*/
+console.log(reprovado);
