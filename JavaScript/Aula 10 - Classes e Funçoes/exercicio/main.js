@@ -1,12 +1,22 @@
+date = new Date();
+    dataArray = Array(3);
+    dataArray[0] = date.getFullYear();
+    dataArray[1] = date.getMonth() + 1;
+    dataArray[2] = date.getDate();
+console.log(dataArray)
+
 class pessoa{
     constructor(nome, dataNascimento){
         this.nome = nome;
-        this.data = new Date(dataNascimento);
+        this.dataNascimento = new Date(dataNascimento);
     };
-    getIdade(data){
-        let data = data.getFullYear() - this.data.getFullYear
-        let data = data.getFullYear()
-        let data = data.getFullYear()
+    getIdade(idade, dataArray){
+        this.dataNascimentoArray = Array(3);
+        this.dataNascimentoArray[0] = this.dataNascimento.getFullYear();
+        this.dataNascimentoArray[1] = this.dataNascimento.getMonth() + 1;
+        this.dataNascimentoArray[2] = this.dataNascimento.getDate() + 1;
+        console.log(this.dataNascimentoArray)
+        console.log(dataArray)
     };
 };
 
@@ -23,4 +33,42 @@ pessoas[7] = new pessoa('carlos', '2000-10-25');
 pessoas[8] = new pessoa('erica', '1999-07-28');
 pessoas[9] = new pessoa('eduarda', '1997-04-12');
 
-console.log(pessoa.getIdade);
+pessoas[0].getIdade()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // getIdade(data){
+    //     var data = data.getFullYear() - this.data.getFullYear(); return data--;
+    //     var data = data.getMonth() - this.data.getMonth(); return data--;
+    //     var data = data.getDate() - this.data.getDate(); return data--;
+    // };
