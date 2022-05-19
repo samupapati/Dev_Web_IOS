@@ -36,15 +36,29 @@ console.log('Exercício 2')
 console.log('\n');
 
 alunos = [
-    {nome: Ana, idade: 17, nota: 8, ano: '2ºB'},
-    {nome: Bruno, idade: 16, nota: 6, ano: '2ºC'},
-    {nome: Veronica, idade: 16, nota: 9, ano: '2ºC'},
-    {nome: Marta, idade: 15, nota: 5, ano: '3ºC'},
-    {nome: Brenno, idade: 19, nota: 6, ano: '3ºC'},
-    {nome: Maria, idade: 14, nota: 4, ano: '1ºF'},
+    {nome: 'Ana', idade: 17, nota: 8, ano: '2ºB'},
+    {nome: 'Paulo', idade: 16, nota: 6, ano: '2ºC'},
+    {nome: 'Veronica', idade: 16, nota: 9, ano: '2ºC'},
+    {nome: 'Marta', idade: 15, nota: 5, ano: '3ºC'},
+    {nome: 'Gabriel', idade: 19, nota: 6, ano: '3ºC'},
+    {nome: 'Maria', idade: 14, nota: 4, ano: '1ºF'},
 ];
 
 console.log('Retornando apenas nome e ano dos alunos:');
-nomeAno = alunos.forEach(() => {
-
+filtrarAlunos = alunos.forEach((filtrar) => {
+    console.log(`O aluno ${filtrar.nome} está no ${filtrar.ano}`)
 });
+
+console.log('\n')
+
+console.log('Retornando apenas os alunos do segundo ano:');
+filtrarAno = alunos.filter((Filtrar) => {
+    if(Filtrar.ano == '2ºC' || Filtrar.ano == '2ºB'){
+        console.log(Filtrar)
+    }
+});
+
+console.log('\n')
+
+console.log('Fazendo a média dos alunos e retornando se ficaram acima da média:');
+
