@@ -61,4 +61,11 @@ filtrarAno = alunos.filter((Filtrar) => {
 console.log('\n')
 
 console.log('Fazendo a média dos alunos e retornando se ficaram acima da média:');
+media = (alunos[0].nota + alunos[1].nota + alunos[2].nota + alunos[3].nota + alunos[4].nota + alunos[5].nota) / 6
+if(media >= 7){
+    console.log('Os alunos ficaram acima da média')
+}
+else{
+    console.log('Os alunos ficaram abaixo da média')
+}
 
