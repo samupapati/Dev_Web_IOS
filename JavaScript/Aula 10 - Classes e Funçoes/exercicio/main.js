@@ -76,4 +76,4 @@ pessoa.prototype.niver = function (){ //declarando o método niver no prototype
     return niver;
 };
 
-pessoas[0].mostrarConsole()//chamando o método para mostrar o resultado
+pessoas[0].mostrarConsole()
