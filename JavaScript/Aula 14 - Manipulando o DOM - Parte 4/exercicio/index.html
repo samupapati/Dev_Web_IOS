@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
-        <input type="text" class=""  id="inputNome" placeholder="Escreva seu nome" required>
-        <input type="text" class=""  id="inputData" placeholder="Escreva sua idade" required>
-        <input type="text" class=""  id="inputEmail" placeholder="Escreva seu email" required>
-    <input type="submit" value="incluir" id="incluir">
-    <button>Excluir</button>
+    <form id="form">
+        <input type="text" class=""  id="inputNome" placeholder="Escreva seu nome" >
+        <input type="text" class=""  id="inputData" placeholder="Escreva sua data de nascimento no formato: dd/mm/aaaa" >
+        <input type="text" class=""  id="inputEmail" placeholder="Escreva seu email" >
+        <input type="submit" value="Incluir" id="incluir">
     </form>
+    <div id="cadastrados">
+        <h1>Pessoas cadastradas</h1>
+        <ul id="lista">
+
+        </ul>
+        <button id="excluir">Excluir</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

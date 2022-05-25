@@ -1,58 +1,84 @@
-data = new Date()
-dia =  data.getDate()
-mes = data.getMonth()
-ano = data.getFullYear()
-dataHojeArray = [dia, mes, ano]
+var data = new Date();
+var dia =  data.getDate();
+var mes = data.getMonth() + 1;
+var ano = data.getFullYear();
+//var dataHojeArray = [dia, mes, ano];
 
-console.log(dataHojeArray)
+idade = 0
+aprovado1 = false
+aprovado2 = false
+aprovado3 = false
+
+var form = document.querySelector('#form');
+form.addEventListener('submit', segurarPagina);
+
+var inputNome = document.querySelector('#inputNome');
+var inputEmail = document.querySelector('#inputEmail');
+var inputDataNascimento = document.querySelector('#inputData');
+var cadastrados = document.querySelector('#cadastrados');
+var lista = document.querySelector('#lista')
 
 
-var inputNome = document.getElementById('inputNome');
-var inputDataNascimento = document.getElementById('InputData');
-var inputEmail = document.getElementById('inputEmail');
-
-var botaoIncluir = document.getElementById('incluir')
-botaoIncluir.addEventListener('click', segurarPagina)
-
-
-let padrao = new RegExp(/^(\d{2})\/(\d{2})\/(\d{4})$/.exec('20/10/2018'));
 
 function segurarPagina(e){
-    if (inputDataNascimento != padrao){
-        alert('teste')
+    e.preventDefault();
+    verificaNomeDataEmail();
+    if(aprovado1 == true && aprovado2 == true && aprovado3 == true){
+        calcularIdade();
+        if(idade >= 18){
+            pessoaCadastrada = document.createElement('li');
+            pessoaCadastrada.innerHTML = `Nome: ${inputNome.value}, Idade: ${idade}, Email: ${inputEmail.value}`;
+            lista.appendChild(pessoaCadastrada)
+            info = document.createElement('p')
+            info.innerHTML = 'Pessoa cadastrada com sucesso!';
+            form.insertBefore(info, document.querySelector('#incluir').nextElementSibling);
+            aprovado1 = false
+            aprovado2 = false
+            aprovado3 = false
+        } else {
+            alert('Pessoas menores de idade não podem ser cadastradas.')
+        }
     }
-    e.preventDefault()
-    verificarIdade()
 }
 
-function verificarIdade(){
-    data = new Date()
-    dia =  data.getDate()
-    mes = data.getMonth()
-    ano = data.getFullYear()
-    dataHojeArray = [dia, mes, ano]
+function calcularIdade(){
+    var convert = inputDataNascimento.value.toString()
+    var nascimentoArray = convert.split('/')
 
-    diaNascimento = inputDataNascimento.getDate();
-    mesNascimento = inputDataNascimento.getMonth();
-    anoNascimento = inputDataNascimento.getFullYear();
-    
-    dataNascimentoArray = [diaNascimento, mesNascimento, anoNascimento]
+    if(nascimentoArray[1] < mes){
+        idade = ano - nascimentoArray[2]
+    } else if(nascimentoArray[1] == mes && nascimentoArray[0] <= dia){
+        idade = ano - nascimentoArray[2]
+    } else{
+        idade = ano - nascimentoArray[2] - 1
+    }
+}    
 
-    if (dataNascimentoArray[1] < dataHojeArray[1]){ //verificando se o mes que a pessoa faz aniversário é menor que o mes atual
-        console.log('teste')
+function verificaNomeDataEmail(){
+    var dataPadrao = new RegExp(/^[0-3]?[0-9].[0-3]?[0-9].(?:[0-9]{2})?[0-9]{2}$/);
+    var emailPadrao = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi);
+
+    if(inputNome.value === ''){
+        let errorNome = document.createElement('p');
+        errorNome.innerHTML = 'Por favor, digite seu nome';
+        form.appendChild(errorNome);
+    } else{
+        aprovado1 = true
     }
-    /*else if(this.dataNascimentoArray[1] == dataArray[1] && this.dataNascimentoArray[2] <= dataArray[2]){ //verificando se a pessoa faz aniversário no mes atual E se ela fez aniversário em um dia que ja passou do mês atual
-        idade = dataArray[0] - this.dataNascimentoArray[0]; //subtraindo o ano atual pelo nascimento para obter a idade da pessoa
+    if (!dataPadrao.test(inputDataNascimento.value)){
+        let errorData = document.createElement('p');
+        errorData.innerHTML = 'Por favor, digite a data no formato: dd/mm/aaaa';
+        form.appendChild(errorData);
+    } else{
+        aprovado2 = true
     }
-    else if(this.dataNascimentoArray[1] >= dataArray[1]){ //verificando se a pessoa faz aniversário depois do mes atual
-        idade = dataArray[0] - this.dataNascimentoArray[0] -1; //subtraindo o ano atual pelo nascimento para obter a idade da pessoa, o -1 foi usado porque a pessoa ainda não fez aniversário, logo, ela permananece com a mesma idade
-    };*/
+    if (!emailPadrao.test(inputEmail.value)){
+        let errorEmail = document.createElement('p');
+        errorEmail.innerHTML = 'Por favor, digite o email no formato: email@dominio.com';
+        form.appendChild(errorEmail);
+    } else{
+        aprovado3 = true
+    }
 }
 
 
-
-console.log(verificarIdade())
-
-test = inputDataNascimento
-
-console.log(test)

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    font-family: 'Lato';
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff2e0;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 2%;
+    background-color: #e3d2ba;
+}
+
+#form input{
+    margin: 2%;
+    width: 96%;
+    height: 35px;
+    outline: none;
+    border: none;
+}
+
+#form input:focus{
+    border: 3px solid black;
+}
+
+#incluir{
+    width: 20% !important;
+    align-self: center;
+}
+
+#cadastrados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 2%;
+    background-color: #e3d2ba;
+}
+
+#lista{
+    list-style: decimal;
+}
+
+#excluir{
+    background-color: #ffe2e2;
+}
+
+#excluir, #incluir{
+    width: 20% !important;
+    align-self: center;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+#excluir:hover, #incluir:hover{
+    background-color: white;
+}
