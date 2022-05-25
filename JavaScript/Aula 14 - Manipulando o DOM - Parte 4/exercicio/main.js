@@ -16,9 +16,10 @@ var inputNome = document.querySelector('#inputNome');
 var inputEmail = document.querySelector('#inputEmail');
 var inputDataNascimento = document.querySelector('#inputData');
 var cadastrados = document.querySelector('#cadastrados');
-var lista = document.querySelector('#lista')
+var lista = document.querySelector('#lista');
 
-
+var excluir = document.querySelector('#excluir');
+excluir.addEventListener('click', removerLista)
 
 function segurarPagina(e){
     e.preventDefault();
@@ -31,6 +32,7 @@ function segurarPagina(e){
             lista.appendChild(pessoaCadastrada)
             info = document.createElement('p')
             info.innerHTML = 'Pessoa cadastrada com sucesso!';
+            setTimeout(() => info.innerHTML = '', 3000) 
             form.insertBefore(info, document.querySelector('#incluir').nextElementSibling);
             aprovado1 = false
             aprovado2 = false
@@ -62,6 +64,7 @@ function verificaNomeDataEmail(){
         let errorNome = document.createElement('p');
         errorNome.innerHTML = 'Por favor, digite seu nome';
         form.appendChild(errorNome);
+        setTimeout(() => errorNome.innerHTML = '', 3000) 
     } else{
         aprovado1 = true
     }
@@ -69,6 +72,7 @@ function verificaNomeDataEmail(){
         let errorData = document.createElement('p');
         errorData.innerHTML = 'Por favor, digite a data no formato: dd/mm/aaaa';
         form.appendChild(errorData);
+        setTimeout(() => errorData.innerHTML = '', 3000) 
     } else{
         aprovado2 = true
     }
@@ -76,9 +80,14 @@ function verificaNomeDataEmail(){
         let errorEmail = document.createElement('p');
         errorEmail.innerHTML = 'Por favor, digite o email no formato: email@dominio.com';
         form.appendChild(errorEmail);
+        setTimeout(() => errorEmail.innerHTML = '', 3000) 
     } else{
         aprovado3 = true
     }
 }
 
-
+function removerLista(){
+    numeroLista = window.prompt('Digite o número correspondente da lista que deseja excluir');
+    var itens = lista.getElementsByTagName('li');
+    lista.removeChild(itens[numeroLista - 1])
+}
