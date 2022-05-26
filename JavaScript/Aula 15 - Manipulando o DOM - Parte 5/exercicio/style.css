@@ -1,12 +1,58 @@
-
-h2{
-    display: inline;
+*{
+    box-sizing: border-box;
 }
 
-h2 > span{
-    margin-left: 30%;
+body{
+    margin: 0;
+    padding: 2%;
 }
 
-.valor{
-    margin-left: 44%;
+.adicionarItem{
+    background-color: rgb(223, 223, 223);
+    padding: 2%;
+}
+
+.input{
+    outline: none;
+    border: none;
+}
+
+.inputMenor{
+    width: 80px;
+}
+
+.descricao{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+h5{
+    margin-bottom: 0;
+}
+
+ul{
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.divLi{
+    display: flex;
+    justify-content: space-between;
+}
+
+.numeroQtd{
+    width: 40px;
+}
+
+.subtotal, .total{
+    display: flex;
+    justify-content: end;
+}
+
+.liSubtotal, .liTotal{
+    align-self: end;
 }

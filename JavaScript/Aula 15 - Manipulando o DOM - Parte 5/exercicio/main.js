@@ -1,60 +1,29 @@
-let form = document.getElementById("addForm");
-let itemList = document.getElementById("items");
-let filter = document.getElementById("filter");
 
-// Form submit event
-form.addEventListener("submit", addItem);
-// Delete event
-itemList.addEventListener("click", removeItem);
-// Filter event
-filter.addEventListener("keyup", buscarItems);
+adicionarItem = document.querySelector('.adicionarItem');
+itemAdicionar = document.querySelector('.itemAdicionar');
+valorAdicionar = document.querySelector('.valorAdicionar');
+quantidadeAdicionar = document.querySelector('.quantidadeAdicionar');
 
-// Adiciona item
-function addItem(e) {
+divLi = document.querySelector('.divLi');
+li = document.querySelector('.li');
+valores = document.querySelector('.valores');
+cifrao = document.querySelector('.cifrao');
+buttonsItem = document.querySelector('.buttonsItem');
+aumentarQtd = document.querySelector('.aumentarQtd');
+numeroQtd = document.querySelector('.numeroQtd');
+diminuirQtd = document.querySelector('.diminuirQtd');
+excluirItem = document.querySelector('.excluirItem');
+
+subtotal = document.querySelector('.subtotal');
+liSubtotal = document.querySelector('.liSubtotal');
+total = document.querySelector('.total');
+liTotal = document.querySelector('.liTotal')
+
+adicionarItem.addEventListener('submit', adicionarAoCarrinho);
+
+function adicionarAoCarrinho(e){
   e.preventDefault();
-  // Pega o valor do <input>
-  let newItem = document.getElementById("item").value;
-  // Cria novo elemento <li>
-  let li = document.createElement("li");
-  // Adiciona classe
-  li.className = "list-group-item";
-  // Adiciona o texto no novo elemento com o valor armazenado no newItem
-  li.appendChild(document.createTextNode(newItem));
-  // Cria o elemento botão para deletar um item
-  let deleteBtn = document.createElement("button");
-  // Adiciona classes para o botão de deletar
-  deleteBtn.className = "btn btn-danger btn- float-end delete";
-  // Acrescenta o texto no novo elemento
-  deleteBtn.appendChild(document.createTextNode("x"));
-  // Acrescenta o botão no elemento li
-  li.appendChild(deleteBtn);
-  itemList.appendChild(li); // Adiciona o novo item na lista
-  form.reset(); // Limpa o formulário
-}
-
-// Função Remove Item
-function removeItem(e) {
-  if (e.target.classList.contains("delete")) {
-    let li = e.target.parentElement;
-    itemList.removeChild(li);
+  if(itemAdicionar.value != '' && valorAdicionar.value != '' && quantidadeAdicionar.value != ''){
+    alert('teste')
   }
-}
-
-// Função buscarItems
-function buscarItems(e) {
-  // Converte o texto digitado para minúsculo
-  let text = e.target.value.toLowerCase();
-  // Busca todos os itens
-  let items = itemList.getElementsByTagName("li");
-  // Converte os itens para array
-  Array.from(items).forEach(function (item) {
-    // Busca o primeiro item da lista
-    let itemName = item.firstChild.textContent;
-    // Busca o item na lista que começa com o mesmo texto digitado
-    if (itemName.toLowerCase().indexOf(text) != -1) {
-      item.style.display = "block"; // exibe o item
-    } else {
-      item.style.display = "none"; // oculta o item
-    }
-  });
 }
