@@ -9,13 +9,21 @@
 </head>
 <body>
     <form id="form">
+        <h1>Campeonato de COD Warzone</h1>
         <input type="text" class=""  id="inputNome" placeholder="Escreva seu nome" >
         <input type="text" class=""  id="inputData" placeholder="Escreva sua data de nascimento no formato: dd/mm/aaaa" >
         <input type="text" class=""  id="inputEmail" placeholder="Escreva seu email" >
-        <input type="submit" value="Incluir" id="incluir">
+        <label for="modo">Modo:</label>
+        <select name="" id="modo">
+            <option value="Gulag 1x1">Gulag 1x1</option>
+            <option value="Mata-Mata em Equipe">Mata-Mata em Equipe</option>
+            <option value="Battle Royale Solo">Battle Royale Solo</option>
+            <option value="Battle Royale Squad">Battle Royale Squad</option>
+        </select>
+        <input type="submit" value="Cadastrar" id="incluir">
     </form>
     <div id="cadastrados">
-        <h1>Pessoas cadastradas</h1>
+        <h2>Participantes cadastrados</h2>
         <ul id="lista">
 
         </ul>

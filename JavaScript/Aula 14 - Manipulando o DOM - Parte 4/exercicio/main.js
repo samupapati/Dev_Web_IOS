@@ -15,10 +15,12 @@ form.addEventListener('submit', segurarPagina);
 var inputNome = document.querySelector('#inputNome');
 var inputEmail = document.querySelector('#inputEmail');
 var inputDataNascimento = document.querySelector('#inputData');
+var modo = document.querySelector('#modo')
 var cadastrados = document.querySelector('#cadastrados');
 var lista = document.querySelector('#lista');
 
-var excluir = document.querySelector('#excluir');
+h2 = document.querySelector('h2')
+excluir = document.querySelector('#excluir');
 excluir.addEventListener('click', removerLista)
 
 function segurarPagina(e){
@@ -28,12 +30,14 @@ function segurarPagina(e){
         calcularIdade();
         if(idade >= 18){
             pessoaCadastrada = document.createElement('li');
-            pessoaCadastrada.innerHTML = `Nome: ${inputNome.value}, Idade: ${idade}, Email: ${inputEmail.value}`;
+            pessoaCadastrada.innerHTML = `Nome: ${inputNome.value}, Idade: ${idade}, Email: ${inputEmail.value}, Modo: ${modo.value}`;
             lista.appendChild(pessoaCadastrada)
             info = document.createElement('p')
-            info.innerHTML = 'Pessoa cadastrada com sucesso!';
+            info.innerHTML = 'Participante cadastrado com sucesso!';
             setTimeout(() => info.innerHTML = '', 3000) 
             form.insertBefore(info, document.querySelector('#incluir').nextElementSibling);
+            excluir.style.display = 'block';
+            h2.style.display = 'block';
             aprovado1 = false
             aprovado2 = false
             aprovado3 = false
