@@ -1,7 +1,12 @@
-body{
-    background-color: #e0f6ff;
+
+h2{
+    display: inline;
 }
 
-#test{
-    width: 50% !important;
+h2 > span{
+    margin-left: 30%;
+}
+
+.valor{
+    margin-left: 44%;
 }

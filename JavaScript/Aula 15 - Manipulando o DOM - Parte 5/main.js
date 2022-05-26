@@ -58,3 +58,8 @@ function buscarItems(e) {
     }
   });
 }
+
+arroz = 25;
+feijao = 12;
+
+valor = document.querySelector('#valor');
