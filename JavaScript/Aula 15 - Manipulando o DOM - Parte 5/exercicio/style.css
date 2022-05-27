@@ -23,6 +23,7 @@ body{
 
 .descricao{
     display: flex;
+    width: 50%;
     justify-content: space-between;
     margin-top: 10%;
 }
@@ -39,9 +40,25 @@ ul{
     justify-content: space-between;
 }
 
-.divLi{
-    display: flex;
-    justify-content: space-between;
+.carrinho{
+    background-color: red;
+    display: grid;
+    width: 50;
+    grid-template-columns: 10% 10% 10%;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.item, .valores, .quantidade{
+    width: 100%;
+}
+
+.valores{
+    text-align: center;
+}
+
+.quantidade{
+    text-align: right;
 }
 
 .numeroQtd{
