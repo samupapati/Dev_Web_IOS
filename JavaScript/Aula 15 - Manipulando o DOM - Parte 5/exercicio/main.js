@@ -91,7 +91,7 @@ function criarLista(e){
         i++
         adicionarItem.reset()
     } else{
-        alert('erro')
+        alert('Preencha os campos corretamente!')
     }
 }
 
