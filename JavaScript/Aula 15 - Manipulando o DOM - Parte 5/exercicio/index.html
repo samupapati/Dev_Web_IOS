@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h2>Carrinho</h2>
+    <div class="header">
+        <h2><img src="imgs/carrinho.png">Meu Carrinho</h2>
+    </div>
     <form class="adicionarItem">
         <p>Adicionar item</p>
-        <span>Item*: </span><input type="text" class="input itemAdicionar">
-        <span>Valor*: </span><input type="text" class="input inputMenor valorAdicionar">
-        <span>Quantidade*: </span><input type="number" class="input inputMenor quantidadeAdicionar">
-        <input type="submit" value="Add" class="submit">
-    </form>
-    <div class="descricao">
-        <h5>Item</h5>
-        <h5>Valor</h5>
-        <h5>Quantidade</h5>
-    </div>
-    <hr>
-    <form action="">
-        <div class="">
-            <div class="carrinho">
-                <div class="item">fsdf</div>
-                <div class="valores">fsdf</div>
-                <div class="quantidade">fsdf</div>
+        <div class="inputsDiv">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Item</span>
+                <input type="text" class="form-control input itemAdicionar">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Valor</span>
+                <input type="number" class="form-control input inputMenor valorAdicionar" min="0">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Quantidade</span>
+                <input type="number" class="form-control input inputMenor quantidadeAdicionar" min="0" style="width: 5px;">
             </div>
         </div>
-        <hr>
-        <ul>
-            <li>Subtotal:</li>
-            <ul class="subtotal">
-                <li class="liSubtotal">dfsdfds</li>
-            </ul>
-            <li><strong>Total:</strong></li>
-            <ul class="total">
-                <li class="liTotal">fdfsd</li>
-            </ul>
-        </ul>
+        <input type="submit" value="Adicionar" class="submit">
     </form>
+    <div class="divLista">
+        <ul class="lista">
+            <li class="li" id="tituloLiStyle">
+                <span class="tituloLista">Item</span>
+                <span class="tituloLista">Valor</span>
+                <span class="tituloLista">Quantidade</span>
+                <span class="tituloLista">Opções</span>
+                <span class="tituloLista"> </span>
+                <span class="tituloLista"> </span>
+                <span class="tituloLista">Subtotal</span>
+            </li>
+        </ul>
+    </div>
+    <ul class="totalUl">
+        <li class="textoTotal"><strong>Total:</strong></li>
+        <ul class="total">
+
+        </ul>
+    </ul>
+
     <script src="main.js"></script>
 </body>
+
 </html>
+
+
+<!--
+    <span class="test">Item*: <input type="text" class="input itemAdicionar"></span>
+    <span>Valor*: </span><input type="number" class="input inputMenor valorAdicionar" min="0">
+    <span>Quantidade*: </span><input type="number" class="input inputMenor quantidadeAdicionar" min="0">
+-->
