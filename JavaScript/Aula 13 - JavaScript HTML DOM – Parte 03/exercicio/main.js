@@ -54,7 +54,7 @@ botao3.addEventListener('click', tabuadaNumeroInformado);
 //botão 3 não tem restrição de cliques
 
 //============================================================================================================
-
+imgUA = document.createElement('img'); //criando tag img
 //Criando as funções
 function mostrarUmbrellaAcademy(){
     imgUA = document.createElement('img'); //criando tag img
@@ -66,28 +66,36 @@ function mostrarUmbrellaAcademy(){
     botaoRemover.style.display = 'block'
 }
 
+paragrafo = document.createElement('p'); 
+
+
 function receberNomeUsuario(){
+    paragrafo = document.createElement('p'); 
     nomeUsuario = window.prompt('Por favor, digite seu nome'); //perguntando ao usuário seu nome e guardando na variável nomeUsuario
-    paragrafo = document.createElement('p'); //criando tag p
+//criando tag p
     paragrafo.innerHTML = `Olá ${nomeUsuario}, Seja bem vindo(a) à nossa academia.`; //inserindo conteúdo na tag p
     paragrafo.style.color = 'white';
     paragrafo.style.fontFamily = 'calibri';
-    paragrafo.style.fontWeight = 'bold';
-    document.body.insertBefore(paragrafo, botao2.nextElementSibling); //inserindo tag p depois do botao 2
-
+    paragrafo.style.fontWeight = 'bold'; //inserindo tag p depois do botao 2
+    document.body.insertBefore(paragrafo, botao2.nextElementSibling);
     botaoRemover.style.display = 'block'
 }
+
+divp = document.createElement('div')
+document.body.appendChild(divp)
 
 function tabuadaNumeroInformado(){
     let numeroInformado = window.prompt('Por favor, digite um número'); //perguntando ao usuário para digitar um número e guardando na variável numeroInformado
     if (isNaN(numeroInformado)){ //verificando se o usuário digitou outra coisa diferente de números
         window.alert('É PARA DIGITAR NÚMEROS, SABE LER NÃO?!!') //avisando o usuário
     } else{
+        divp = document.createElement('div')
+        document.body.appendChild(divp)
         tituloTabuada = document.createElement('h3'); //criando h3
         tituloTabuada.innerHTML = `A tabuada do número ${numeroInformado} é:`; //inserindo conteúdo no h3
         tituloTabuada.style.color = 'white';
         tituloTabuada.style.fontFamily = 'calibri';
-        document.body.insertBefore(tituloTabuada, botao3.nextElementSibling); // inserindo h3 depois do botao3
+        divp.appendChild(tituloTabuada); // inserindo h3 depois do botao3
         for(let i = 0; i <= 10; i++){ // loop para fazer a tabuada
             paragrafo2 = document.createElement('p'); //criando tag p 2
             paragrafo2.innerHTML = `${numeroInformado} x ${i} = ${numeroInformado * i}`; //inserindo conteúdo na tag p   
@@ -95,20 +103,23 @@ function tabuadaNumeroInformado(){
             paragrafo2.style.fontFamily = 'calibri';
             paragrafo2.style.fontWeight = 'bold';
             paragrafo2.className = 'pTabuada'
-            document.body.insertBefore(paragrafo2, tituloTabuada.nextElementSibling); //inserindo tag p depois do titulo h3
+            divp.appendChild(paragrafo2); //inserindo tag p depois do titulo h3
         
             botaoRemover.style.display = 'block'
         }
     }
 }
-
 function removerConteudo(){
-    for (child of document.body.children){
-        child.remove();
-        if(document.body.contains(document.querySelector('p').className === 'pTabuada')){
-            alert('teste')
-        }
-    }
+    divp.remove()
+    imgUA.remove()
+    paragrafo.remove()
+    document.body.style.backgroundColor = '#BFBFBF'
+    // for (child of document.body.children){
+    //     child.remove();
+    //     if(document.body.contains(document.querySelector('p').className === 'pTabuada')){
+    //         alert('teste')
+    //     }
+    // }
 }
 
 //============================================================================================================
