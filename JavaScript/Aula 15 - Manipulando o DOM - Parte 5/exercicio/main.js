@@ -89,7 +89,6 @@ function criarLista(e){
         li.appendChild(subtotal)
 
         i++
-        adicionarItem.reset()
     } else{
         alert('Preencha os campos corretamente!')
     }
