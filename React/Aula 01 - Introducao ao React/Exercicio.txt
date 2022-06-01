@@ -25,6 +25,8 @@ Referência: https://www.youtube.com/watch?v=TlD49IAEPmc
 
 Hooks manipula alguns recursos do react sem precisar usar classes.
 
+Referência: https://pt-br.reactjs.org/docs/hooks-intro.html
+
 5 - Componentes
 
 Componente são pedaços do código que formam a interface em si e que podem ser reaproveitados para
