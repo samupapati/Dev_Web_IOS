@@ -1,0 +1,31 @@
+1 - Com suas palavras explique o que é React.
+
+React é uma biblioteca que utiliza a sintaxe JSX, derivada do Javascript, é utilizado para montar 
+interfaces do usuário ou, em outras palavras, tudo que o usuário vê e interage. 
+
+2 - Diferença de Biblioteca e Framework.
+
+Biblioteca é usado para resolver alguns problemas específicos no código, é um conjunto de códigos 
+criado para resolver tal problema, não sendo necessário depender da biblioteca para escrever todo o 
+seu programa.
+
+Framework é um conjunto de ferramentas que você precisa escrever o código na forma em que o Framework
+trabalha, sendo assim, o seu programa depende do Framework para funcionar, caso ele se torne obsoleto,
+o seu programa também se tornará obsoleto.
+
+Referência: https://www.youtube.com/watch?v=kOt_DdAnMbc
+
+3 - Props
+
+Props são atributos que passamos para um elemento para referenciar ele em uma função, classe, etc.
+
+Referência: https://www.youtube.com/watch?v=TlD49IAEPmc
+
+4 - Hooks
+
+Hooks manipula alguns recursos do react sem precisar usar classes.
+
+5 - Componentes
+
+Componente são pedaços do código que formam a interface em si e que podem ser reaproveitados para
+construir a UI.
