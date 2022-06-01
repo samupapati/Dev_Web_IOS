@@ -41,14 +41,8 @@ botaoRemover.addEventListener('click', removerConteudo)
 
 //Configurando para quando o botão ser clicado chamar a função e desabilitar após clicado uma vez
 botao1.addEventListener('click', mostrarUmbrellaAcademy)
-botao1.addEventListener('click', function(){ //função para desabilitar o botão após o usuário clicar
-    this.disabled = true; //desabilita o botao
-}) //Depois do usuário clicar o botão é desabilitado para não ficar clicando várias vezes
 
 botao2.addEventListener('click', receberNomeUsuario);
-botao2.addEventListener('click', function(){
-    this.disabled = true;
-})
 
 botao3.addEventListener('click', tabuadaNumeroInformado);
 //botão 3 não tem restrição de cliques
@@ -66,18 +60,19 @@ function mostrarUmbrellaAcademy(){
     botaoRemover.style.display = 'block'
 }
 
-paragrafo = document.createElement('p'); 
+divP1 = document.createElement('div')
+document.body.insertBefore(divP1, botao2.nextElementSibling)
+paragrafo = document.createElement('p');
 
-
-function receberNomeUsuario(){
-    paragrafo = document.createElement('p'); 
+function receberNomeUsuario(){ 
+    paragrafo = document.createElement('p');
     nomeUsuario = window.prompt('Por favor, digite seu nome'); //perguntando ao usuário seu nome e guardando na variável nomeUsuario
 //criando tag p
     paragrafo.innerHTML = `Olá ${nomeUsuario}, Seja bem vindo(a) à nossa academia.`; //inserindo conteúdo na tag p
     paragrafo.style.color = 'white';
     paragrafo.style.fontFamily = 'calibri';
     paragrafo.style.fontWeight = 'bold'; //inserindo tag p depois do botao 2
-    document.body.insertBefore(paragrafo, botao2.nextElementSibling);
+    divP1.appendChild(paragrafo)
     botaoRemover.style.display = 'block'
 }
 
@@ -113,13 +108,8 @@ function removerConteudo(){
     divp.remove()
     imgUA.remove()
     paragrafo.remove()
+    divP1.removeChild(paragrafo)
     document.body.style.backgroundColor = '#BFBFBF'
-    // for (child of document.body.children){
-    //     child.remove();
-    //     if(document.body.contains(document.querySelector('p').className === 'pTabuada')){
-    //         alert('teste')
-    //     }
-    // }
 }
 
 //============================================================================================================
