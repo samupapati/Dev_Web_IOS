@@ -4,7 +4,7 @@ import Nota from './Components/Nota.jsx';
 
 function App(){
     return (
-        <div className='Container'>
+        <div className='container'>
             <Nome />
             <Nota />
         </div>

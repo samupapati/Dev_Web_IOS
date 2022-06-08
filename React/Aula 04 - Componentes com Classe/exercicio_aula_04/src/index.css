@@ -1,13 +1,81 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #dddddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px gray;
 }
+
+.nome{
+  color: #0012b1;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+  font-family: 'Lato';
+}
+
+
+p, li, table{
+  font-family: 'Roboto';
+}
+
+table{
+  width: 250px;
+}
+
+th{
+  background-color: #0012b1; 
+  color: white;
+}
+
+td:nth-child(even){
+  background-color: #dddddd;
+  font-weight: bold;
+}
+
+td:nth-child(odd){
+  background-color: #c4c4c4;
+}
+
+td{
+  border: none !important;
+}
+
+tr, th, td{
+  border: 1px solid black;
+  padding: 3%;
+}
+
+.media{
+  background-color: #0012b1;
+  color: white;
+  padding: 10%;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.aprovado{
+  color: #48af3b;
+}
+
+

@@ -4,7 +4,7 @@ class Nome extends Component{
     constructor(props){
         super(props)
         this.state = {
-            nome: 'Samuel'
+            nome: 'Joana'
         };
     };
 
@@ -12,12 +12,9 @@ class Nome extends Component{
     render (){
         return(
             <div>
-                <p>
-                    Aluno:
-                </p>
-                <p>
-                     {this.state.nome}
-                </p>
+                <h1 className="nome">
+                    {this.state.nome}
+                </h1>
             </div>
         );
     }
