@@ -1,14 +1,24 @@
+import { Component } from "react";
+import PropTypes from 'prop-types';
 
-var aluno = [5, 8, 6, 9]
-
-
+var notasAluno = [5, 8, 6, 9]
+var soma = 0
 
 function calcularMedia(){
-    var soma = 0
-    for(var i = 0; i < aluno.length; i++){
-        soma += aluno[i]
+    for(var i = 0; i < notasAluno.length; i++){
+        soma += notasAluno[i]
     }
-    return soma = soma/aluno.length
+    return soma = soma / 4
 }
 
-export default calcularMedia
+export class Nota extends Component {
+    render() {
+        return (
+            <div>
+               Nota: {calcularMedia()}
+            </div>
+        );
+    }
+}
+
+export default Nota;

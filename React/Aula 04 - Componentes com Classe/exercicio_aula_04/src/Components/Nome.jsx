@@ -1,17 +1,27 @@
-import App from "../App";
+import { Component } from "react"
+
+class Nome extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            nome: 'Samuel'
+        };
+    };
 
 
-class Nome extends App{
-    state = {
-        nome: 'Carlito'
-    }
-    render(){
-        return (
-            <p className='nome'>
-                {this.state.nome}
-            </p>
+    render (){
+        return(
+            <div>
+                <p>
+                    Aluno:
+                </p>
+                <p>
+                     {this.state.nome}
+                </p>
+            </div>
         );
     }
 }
+
 
 export default Nome
