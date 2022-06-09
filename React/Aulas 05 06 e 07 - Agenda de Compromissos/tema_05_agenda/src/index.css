@@ -9,6 +9,7 @@
 
   body {
     font-family: 'Poppins', sans-serif;
+    background-color: #fffcf6;
   }
 
   .container {
@@ -16,9 +17,11 @@
     margin: 30px auto;
     overflow: auto;
     min-height: 300px;
-    border: 1px solid steelblue;
+    border: 10px solid #faa200;
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 3px gray;
+    background-color: white;
   }
 
   .header {
@@ -63,7 +66,7 @@
   }
 
   .task.reminder {
-    border-left: 5px solid green;
+    border-left: 5px solid #faa200;
   }
 
   .task h3 {
