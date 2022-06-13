@@ -1,18 +1,21 @@
-import App from '../App'
+import { useState } from "react"
 
-const Header = () => {
-    function click(){
-        
+export default function NewTasks({ addTodo }){
+    const [text, setText] = useState(null);
+    const [id, setId] = useState(0)
+
+    const todoCreate = (text) =>{
+        const todo0bj = {text: text, id: id};
+        setId(id+1);
+        addTodo(todo0bj)
     }
-    return (
-        <div>
+
+
+    return(
+        <div className="blocoTarefas">
             <h1>Minhas Tarefas</h1>
-            <button onClick={click} className="botao">
-                Adicionar Tarefa
-            </button>
-
+            <input onChange={(e) => setText(e.target.value)} className="tarefa"/>
+            <button onClick={() => todoCreate(text)}>Adicionar Tarefa</button>
         </div>
-    );
-};
-
-export default Header; 
+    )
+}
