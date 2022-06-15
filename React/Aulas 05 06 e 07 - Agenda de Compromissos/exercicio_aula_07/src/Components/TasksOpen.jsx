@@ -1,33 +1,31 @@
-import { useState } from 'react';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimesCircle } from 'react-icons/fa'
 import { FaToggleOn } from 'react-icons/fa'
-import { FaToggleOff } from 'react-icons/fa'
+import TasksDone from './TasksDone'
 
 
-export default function TaskItem({ todo, deleteTodo }) {
-
-    const [todoFinalizado, setTodoFinalizado] = useState([])
-    
-    const moverTodo = () => {
-        setTodoFinalizado([...todoFinalizado, todo])
-        //deleteTodo(todo.id)
-    }
-
-    const [text, setText] = useState(null);
-    const [id, setId] = useState(0)
-    const createTodoFinalizado = (text) => {
-        const todo0bj = {text: text, id: id};
-        setId(id+1);
-        moverTodo(todo0bj)
-    }
-
+export default function TasksOpen({ tasks, mudarReminder, deletaTarefa }) {
     return (
         <div>
-            <div>
-                <span>{todo.text}</span>
-                <FaToggleOn onClick={() => createTodoFinalizado(todo.id)}/>
-                <FaTimes onClick={() => deleteTodo(todo.id)} />
-            </div>
+            <h2>Tarefas ativas</h2>
+            {tasks.length > 0 ? tasks.map((task) => (
+                task.reminder === true ?
+                    <div className='tarefasAtivas tarefas' key={task.id}>
+                        {task.text}
+                        <div>
+                            <FaToggleOn className='botaoAtivo' onClick={() => mudarReminder(task.id)} />
+                            <FaTimesCircle className='botaoExcluir' onClick={() => deletaTarefa(task.id)} />
+                        </div>
+                    </div>
+                    :
+                    null
+            )) : <h2 className='notTarefas'>Não há tarefas</h2>}
+            <h2>Tarefas finalizadas</h2>
+            {tasks.length > 0 ? tasks.map((task) => (
+                task.reminder === false ?
+                    <TasksDone tasks={tasks} mudarReminder={mudarReminder} deletaTarefa={deletaTarefa} />
+                    :
+                    null
+            )) : <h2 className='notTarefas'>Não há tarefas</h2>}
         </div>
     )
 }
