@@ -1,9 +1,22 @@
+import { useState } from 'react'
 import { FaTimesCircle } from 'react-icons/fa'
 import { FaToggleOn } from 'react-icons/fa'
 import TasksDone from './TasksDone'
 
 
-export default function TasksOpen({ tasks, mudarReminder, deletaTarefa }) {
+export default function TasksOpen({ tasks, mudarReminder, deletaTarefa, setTasks }) {
+
+    // const [tasksFinalizadas, setTasksFinalizadas] = useState([])
+
+    // const [id, setId] = useState(0)
+    // const finalizarTask = (text, reminder, id) => {
+    //     var obj = {text: text, id: id, reminder: false};
+    //     setId(id + 1);
+    //     deletaTarefa()
+    //     setTasks([...tasksFinalizadas, obj])
+
+    // }
+
     return (
         <div>
             <h2>Tarefas ativas</h2>
@@ -15,6 +28,8 @@ export default function TasksOpen({ tasks, mudarReminder, deletaTarefa }) {
                             <FaToggleOn className='botaoAtivo' onClick={() => mudarReminder(task.id)} />
                             <FaTimesCircle className='botaoExcluir' onClick={() => deletaTarefa(task.id)} />
                         </div>
+                        {/* botao de teste
+                        <button onClick={() => finalizarTask(task.id, task.text, task.reminder)}>teste</button> */}
                     </div>
                     :
                     null

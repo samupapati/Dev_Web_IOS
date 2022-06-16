@@ -13,32 +13,6 @@ const Header = () => {
                 task.id === id ? { ...task, reminder: !task.reminder } : task
             )
         );
-        // tasks.map((task) => 
-        //     {if(task.id === id){
-        //         if(task.reminder === true){
-        //             task.reminder = false
-
-        //             console.log('reminder:')
-        //             console.log(task.reminder)
-
-        //             setTasks([...tasks, task.reminder])
-
-        //             console.log('tasks:')
-        //             console.log(tasks)
-
-        //         } else{
-        //             task.reminder = true
-                    
-        //             console.log('reminder:')
-        //             console.log(task.reminder)
-
-        //             setTasks([...tasks, task.reminder])
-
-        //             console.log('tasks:')
-        //             console.log(tasks)
-        //         }
-        //     }}
-        // );
     };
 
     const [text, setText] = useState(null);
@@ -59,7 +33,7 @@ const Header = () => {
                 <button className="button" onClick={() => setCreate(text)}>Nova Tarefa</button>
             </div>
 
-            <TasksOpen tasks={tasks} mudarReminder={mudarReminder} deletaTarefa={deletaTarefa} />
+            <TasksOpen tasks={tasks} mudarReminder={mudarReminder} deletaTarefa={deletaTarefa} setTasks={setTasks}/>
         </header>
     );
 };

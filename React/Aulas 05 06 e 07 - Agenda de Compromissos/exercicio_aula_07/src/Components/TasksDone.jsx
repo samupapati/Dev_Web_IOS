@@ -2,6 +2,7 @@ import { FaTimesCircle } from 'react-icons/fa'
 import { FaToggleOff } from "react-icons/fa"
 
 export default function TasksDone({ tasks, mudarReminder, deletaTarefa}) {
+
     return (
         <div>
             {tasks.map((task) => (
