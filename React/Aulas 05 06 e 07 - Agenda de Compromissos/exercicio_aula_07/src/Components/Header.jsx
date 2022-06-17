@@ -2,17 +2,31 @@ import { useState } from "react";
 import TasksOpen from './TasksOpen'
 
 const Header = () => {
-    const [tasks, setTasks] = useState([]);
-    // Deletar tarefa 
-    const deletaTarefa = (id) => {
-        setTasks(tasks.filter((task) => task.id !== id));
+    const [tasksAbertas, setTasksAbertas] = useState([])
+    const [tasksFinalizadas, setTasksFinalizadas] = useState([])
+    // Deletar tarefa
+    const deletaTarefaAberta = (id) => {
+        setTasksAbertas(tasksAbertas.filter((task) => task.id !== id));
     };
+    const deletaTarefaFinalizada = (id) => {
+        setTasksFinalizadas(tasksFinalizadas.filter((task) => task.id !== id));
+    }; 
     //Alterar o reminder 
-    const mudarReminder = (id) => {
-        setTasks(tasks.map((task) =>
-                task.id === id ? { ...task, reminder: !task.reminder } : task
+    const reabrirTarefa = (id) => {
+        setTasksAbertas(...tasksAbertas, tasksFinalizadas.map((task) => {
+                if(task.id === id){
+                    return task.reminder = !task.reminder
+                }}
             )
         );
+        deletaTarefaFinalizada(id)
+    };
+    const finalizarTarefa = (id) => {
+        setTasksFinalizadas(tasksAbertas.map((task) =>
+                task.id === id ? { ...task, reminder: false } : task
+            )
+        );
+        deletaTarefaAberta(id)
     };
 
     const [text, setText] = useState(null);
@@ -21,7 +35,8 @@ const Header = () => {
     const setCreate = (text) => {
         const obj = {text: text, id: id, reminder: true};
         setId(id + 1);
-        setTasks([...tasks, obj])
+        setTasksAbertas([...tasksAbertas, obj])
+        console.log(tasksAbertas)
     }
 
 
@@ -33,7 +48,7 @@ const Header = () => {
                 <button className="button" onClick={() => setCreate(text)}>Nova Tarefa</button>
             </div>
 
-            <TasksOpen tasks={tasks} mudarReminder={mudarReminder} deletaTarefa={deletaTarefa} setTasks={setTasks}/>
+            <TasksOpen tasksAbertas={tasksAbertas} tasksFinalizadas={tasksFinalizadas} deletaTarefaAberta={deletaTarefaAberta} deletaTarefaFinalizada={deletaTarefaFinalizada} reabrirTarefa={reabrirTarefa} finalizarTarefa={finalizarTarefa}/>
         </header>
     );
 };

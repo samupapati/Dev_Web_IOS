@@ -1,16 +1,16 @@
 import { FaTimesCircle } from 'react-icons/fa'
 import { FaToggleOff } from "react-icons/fa"
 
-export default function TasksDone({ tasks, mudarReminder, deletaTarefa}) {
+export default function TasksDone({tasksFinalizadas, reabrirTarefa, deletaTarefaFinalizada}) {
 
     return (
         <div>
-            {tasks.map((task) => (
-                <div className='tarefasFinalizadas tarefas' key={task.id}>
+            {tasksFinalizadas.map((task, index) => (
+                <div className='tarefasFinalizadas tarefas' key={index}>
                     {task.text}
                     <div>
-                        <FaToggleOff className='botaoAtivo' onClick={() => mudarReminder(task.id)} />
-                        <FaTimesCircle className='botaoExcluir' onClick={() => deletaTarefa(task.id)} />
+                        <FaToggleOff className='botaoAtivo' onClick={() => reabrirTarefa(task.id)} />
+                        <FaTimesCircle className='botaoExcluir' onClick={() => deletaTarefaFinalizada(task.id)} />
                     </div>
                 </div>
             ))}
