@@ -3,30 +3,28 @@ import { FaToggleOn } from 'react-icons/fa'
 import TasksDone from './TasksDone'
 
 
-export default function TasksOpen({ tasksAbertas, tasksFinalizadas, deletaTarefaAberta, deletaTarefaFinalizada, reabrirTarefa, finalizarTarefa}) {
+export default function TasksOpen({ tasksAbertas, tasksFinalizadas, deletaTaskAberta, deletaTaskFinalizada, reabrirTask, finalizarTask}) {
 
     return (
         <div>
             <h2>Tarefas ativas</h2>
-            {tasksAbertas.length > 0 ? tasksAbertas.map((task, index) => (
+            {tasksAbertas.length > 0 ? tasksAbertas.map((task) => (
                 task.reminder === true ?
-                    <div className='tarefasAtivas tarefas' key={index}>
+                    <div className='tarefasAtivas tarefas' id={task.id} key={task.id}>
                         {task.text}
                         <div>
-                            <FaToggleOn className='botaoAtivo' onClick={() => finalizarTarefa(task.id)} />
-                            <FaTimesCircle className='botaoExcluir' onClick={() => deletaTarefaAberta(task.id)} />
+                            <FaToggleOn className='botaoAtivo' onClick={() => finalizarTask(task.id)} />
+                            <FaTimesCircle className='botaoExcluir' onClick={() => deletaTaskAberta(task.id)} />
                         </div>
                     </div>
                     :
                     null
             )) : <h2 className='notTarefas'>Não há tarefas</h2>}
             <h2>Tarefas finalizadas</h2>
-            {tasksFinalizadas.length > 0 ? tasksFinalizadas.map((task) => (
-                task.reminder === false ?
-                    <TasksDone tasksFinalizadas={tasksFinalizadas} reabrirTarefa={reabrirTarefa} deletaTarefaFinalizada={deletaTarefaFinalizada} />
-                    :
-                    null
-            )) : <h2 className='notTarefas'>Não há tarefas</h2>}
+            {tasksFinalizadas.length > 0 ? 
+                <TasksDone tasksFinalizadas={tasksFinalizadas} reabrirTask={reabrirTask} deletaTaskFinalizada={deletaTaskFinalizada}/> 
+                : 
+                <h2 className='notTarefas'>Não há tarefas</h2>}
         </div>
     )
 }

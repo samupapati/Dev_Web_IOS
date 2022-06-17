@@ -10,10 +10,6 @@ body{
   margin: 0;
 }
 
-.container{
-
-}
-
 .header{
   display: flex;
   flex-direction: column;
@@ -59,7 +55,6 @@ h1{
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   font-size: 18px;
-  text-transform: capitalize;
   background-color: black;
   color: white;
   transition: .3s;
