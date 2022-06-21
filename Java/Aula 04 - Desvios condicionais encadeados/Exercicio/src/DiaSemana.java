@@ -9,10 +9,6 @@ public class DiaSemana {
         System.out.println("Escreva um número de 1 a 7");
         numero = entrada.nextInt();
 
-        if(numero > 7 || numero < 1){
-            System.out.print("ERRO! Não foi informado um numero de 1 a 7");
-        }
-
         switch(numero){
             case 1:
                 System.out.println("Domingo");
@@ -35,6 +31,10 @@ public class DiaSemana {
             case 7:
                 System.out.println("Sábado");
                 break;
+            default:
+                System.out.print("ERRO! Digite um número de 1 a 7");
+                break;
         }
+        entrada.close();
     }
 }

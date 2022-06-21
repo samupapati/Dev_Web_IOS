@@ -11,15 +11,16 @@ public class MaiorNumero {
         num2 = entrada.nextInt();
         num3 = entrada.nextInt();
 
+
         if(num1 == num2 & num1 == num3){
             System.out.println("Os números sao iguais");
         } else {
             if(num1 > num2 & num1 > num2){
-                System.out.println("O " + num1 + "é o maior");
+                System.out.println("O " + num1 + "é o maior número");
             } else if(num2 > num1 & num2 > num3){
-                System.out.println("O " + num2 + "é o maior");
+                System.out.println("O " + num2 + "é o maior número");
             } else{
-                System.out.println("O " + num3 + "é o maior");
+                System.out.println("O " + num3 + "é o maior número");
             }
         }
         entrada.close();
