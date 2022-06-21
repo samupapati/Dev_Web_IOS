@@ -21,7 +21,8 @@ export default function TasksOpen({ tasksAbertas, tasksFinalizadas, deletaTaskAb
                     null
             )) : <h2 className='notTarefas'>Não há tarefas</h2>}
             <h2>Tarefas finalizadas</h2>
-            {tasksFinalizadas.length > 0 ? 
+            {tasksFinalizadas.len
+            ? 
                 <TasksDone tasksFinalizadas={tasksFinalizadas} reabrirTask={reabrirTask} deletaTaskFinalizada={deletaTaskFinalizada}/> 
                 : 
                 <h2 className='notTarefas'>Não há tarefas</h2>}
