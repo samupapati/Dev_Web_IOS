@@ -4,7 +4,7 @@ public class TabuadaCinco {
 
         System.out.println("Tabuada do cinco:");
         do{
-            System.out.println(tabuada + "x" + contador);
+            System.out.println(tabuada + " x " + contador + " = " + tabuada*contador);
             contador++;
         } while(contador <= 10);
     }
