@@ -18,5 +18,6 @@ public class menorNumero {
             contador++;
         }
         System.out.println("O menor número informado é: " + numBackup);
+        entrada.close();
     }
 }

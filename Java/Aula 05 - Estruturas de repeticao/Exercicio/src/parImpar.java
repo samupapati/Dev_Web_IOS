@@ -20,5 +20,6 @@ public class parImpar {
         }while(contador < perguntas);
         System.out.println("Quantidade de números pares: " + pares);
         System.out.println("Quanditade de números impares: " + impares);
+        entrada.close();
     }
 }
