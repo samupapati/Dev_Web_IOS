@@ -34,5 +34,6 @@ public class Exercicio {
         } else if(mes.equalsIgnoreCase("dezembro")){
             System.out.println("A estação de " + mes + " é " + " Primavera.");
         }
+        entrada.close();
     }
 }
