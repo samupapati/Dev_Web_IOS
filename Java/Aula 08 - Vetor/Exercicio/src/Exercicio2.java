@@ -13,5 +13,6 @@ public class Exercicio2 {
         for(var i = 4; i >= 0; i--){
             System.out.println(array[i]);
         }
+        entrada.close();
     }
 }

@@ -1,9 +1,7 @@
-import java.util.Scanner;
 import java.util.Random;
 
 public class Exercicio3 {
     public static void main(String[] args){
-        Scanner entrada = new Scanner(System.in);
         Random rand = new Random();
 
         int array[] = new int[10];

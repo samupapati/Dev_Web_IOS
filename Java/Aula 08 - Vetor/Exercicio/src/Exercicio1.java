@@ -23,7 +23,7 @@ public class Exercicio1 {
         }
         System.out.println("Maior valor: " + maior);
         System.out.println("Menor valor: " + menor);
-        System.out.println(media);
         System.out.println("Media: " + (media / array.length));
+        entrada.close();
     }
 }
