@@ -28,23 +28,23 @@ public class Exercicio {
                     {
                         if(i == 0){ //verificando indice para inserir a fruta no array
                             str1 = input.toUpperCase();
-                            frutas[i] = str1;
+                            frutas[i] = str1.trim();
                             i++;
                         } else if(i == 1){ //verificando indice para inserir a fruta no array
                             str2 = input.toUpperCase();
-                            frutas[i] = str2;
+                            frutas[i] = str2.trim();
                             i++;
                         } else if(i == 2){ //verificando indice para inserir a fruta no array
                             str3 = input.toUpperCase();
-                            frutas[i] = str3;
+                            frutas[i] = str3.trim();
                             i++;
                         } else if(i == 3){ //verificando indice para inserir a fruta no array
                             str4 = input.toUpperCase();
-                            frutas[i] = str4;
+                            frutas[i] = str4.trim();
                             i++;
                         } else if(i == 4){ //verificando indice para inserir a fruta no array
                             str5 = input.toUpperCase();
-                            frutas[i] = str5;
+                            frutas[i] = str5.trim();
                             i++;}
                     } else{
                         System.out.println("Não pode haver frutas iguais");
@@ -60,8 +60,9 @@ public class Exercicio {
         for(int i = 0; i < frutas.length; i++){
             //alterando as palavras para minusculas
             frutasLower[i] = frutas[i].replace(frutas[i], frutas[i].toLowerCase());
-            System.out.println(frutasLower[i]);
+            System.out.println((i+1) + " - " + frutasLower[i]);
         }
+        entrada.close();
     }
 }
 

@@ -34,5 +34,6 @@ public class Exercicio4 {
         for(var i = 0; i < arrayC.length; i++){
             System.out.println(arrayC[i]);
         }
+        entrada.close();
     }
 }
