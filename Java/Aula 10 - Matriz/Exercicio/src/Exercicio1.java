@@ -36,5 +36,6 @@ public class Exercicio1 {
             }
             System.out.println("");
         }
+        entrada.close();
     }
 }
